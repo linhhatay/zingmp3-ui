@@ -1,38 +1,67 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsla(0, 0%, 100%, 0.3);
+  border-radius: 10px;
+}
+
+/* ::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+} */
+
+:root {
+  --layout-bg: #061d50;
+  --text-primary: #fff;
+  --img-logo-mp3: url("https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg");
+  --sidebar-bg: hsla(0, 0%, 100%, 0.05);
+  --alpha-bg: hsla(0, 0%, 100%, 0.1);
+  --purple-primary: #3460f5;
+  --border-primary: hsla(0, 0%, 100%, 0.1);
+  --sidebar-popup-bg: #1d2a49;
+  --player-bg: rgba(0,0,0,0.2);
+  --border-player: hsla(0,0%,100%,0.1);
+  --text-secondary: hsla(0,0%,100%,0.5);
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../public/assets/img/themeBgs/listTheme2/theme1.jpg);
+  z-index: -1;
+  background-color: var(--layout-bg);
+  background-size: 1920px auto;
+  background-repeat: repeat;
 }
