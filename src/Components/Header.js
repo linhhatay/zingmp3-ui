@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../Styles/Header.css";
 import HeaderOptions from "../Shared/HeaderOptions";
 import { BsArrowLeft, BsArrowRight, BsSearch } from "react-icons/bs";
 
 const Header = () => {
-
   return (
     <div className="header">
       <div className="header-left">
@@ -38,7 +37,6 @@ const Header = () => {
               <div className="header-right-icon">{item.icon}</div>
             </div>
           ))}
-        
       </div>
     </div>
   );

@@ -1,0 +1,266 @@
+.user {
+  margin-top: 70px;
+}
+
+.user-container {
+  padding-top: 70px;
+}
+
+.user-content {
+}
+
+.user-header {
+  display: flex;
+  align-items: center;
+}
+
+.user-title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #fff;
+}
+
+.user-header-btn {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  border-radius: 50%;
+  margin-left: 14px;
+  outline: none;
+  border: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.user-header-btn:hover {
+  filter: brightness(0.9);
+  cursor: pointer;
+}
+
+.user-header-icon {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  background-color: var(--purple-primary);
+  border-radius: 50%;
+}
+
+.user-bottom {
+}
+
+.user__nav {
+  margin: 30px 0;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.user__nav-content {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+}
+
+.user__nav-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  font-weight: 500;
+  height: 100%;
+}
+
+.user__nav-item {
+  color: #dadada;
+  margin: 0 40px 0 0;
+  position: relative;
+  padding: 13px 0;
+  cursor: pointer;
+}
+
+.user__nav-item.active {
+  color: #fff;
+}
+
+.user__nav-item.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  border-bottom: 2px solid var(--purple-primary);
+}
+
+.user__content {
+}
+
+.user__content-btn {
+  margin-bottom: 20px;
+}
+
+.user__content-link {
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 4px 10px;
+  border: 1px solid;
+  border-radius: 999px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.user__content-link:not(.active):hover {
+  color: var(--link-text-hover);
+}
+
+.user__content-link.active {
+  background-color: var(--purple-primary);
+  border-color: var(--purple-primary);
+}
+
+.user__songs {
+}
+
+.user__songs-wrapper {
+}
+
+.user__songs-header {
+  align-items: center;
+  display: flex;
+  text-align: left;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-bottom: 1px solid var(--border-secondary);
+  height: 46px;
+  color: var(--text-secondary);
+  justify-content: space-between;
+}
+
+.songs-left {
+}
+
+.songs-left h3,
+.songs-center h3,
+.songs-right h3 {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-left: 16px;
+}
+
+.songs-center {
+  margin-left: 40px;
+}
+
+.songs-right {
+}
+
+.user__songs-list {
+}
+
+.user__songs-select {
+}
+
+.user__songs-item {
+  align-items: center;
+  display: flex;
+  text-align: left;
+  padding: 10px 0;
+  border-radius: 5px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.user__songs-item-left {
+  display: flex;
+  width: 50%;
+}
+
+.song-prefix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin-right: 10px;
+  color: var(--song-item-action);
+  font-weight: 700;
+}
+
+.song-prefix-icon {
+  font-size: 14px;
+  color: var(--song-item-action)
+}
+
+.song-thumb {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.song-thumb img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.song-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.song-info h3 {
+  color: #fff;
+  font-size: 13px;
+}
+
+.song-info a {
+  color: var(--text-secondary);
+  font-size: 11px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.song-info a:hover {
+    text-decoration: underline;
+    color: var(--link-text-hover);
+}
+
+.user__songs-item-center {
+    flex: 1;
+    flex-grow: 1;
+    
+}
+
+.user__songs-item-center a {
+    color: var(--song-item-action);
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.user__songs-item-center a:hover {
+    text-decoration: underline;
+    color: var(--link-text-hover);
+}
+
+.user__songs-item-right {
+}
+
+.user-song-actions {
+
+}
+
+.user-song-icon {
+    color: var(--purple-primary);
+}
+
+.user-song-times {
+    color: var(--song-item-action)
+}
