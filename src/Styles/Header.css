@@ -8,6 +8,7 @@
   height: 70px;
   z-index: 99;
   min-width: 660px;
+  background-color: var(--layout-bg);
 }
 
 .header-left {

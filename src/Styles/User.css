@@ -148,13 +148,13 @@
 .songs-center h3,
 .songs-right h3 {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
-  margin-left: 16px;
+  margin-left: 26px;
 }
 
 .songs-center {
-  margin-left: 40px;
+  margin-left: 58px;
 }
 
 .songs-right {
@@ -177,9 +177,33 @@
   user-select: none;
 }
 
+.user__songs-item:hover {
+  background-color: var(--alpha-bg);
+}
+
+.user__songs-item.active {
+  background-color: var(--alpha-bg);
+}
+
+.user__songs-item:hover .song-thumb-active {
+  display: flex;
+}
+
+.user__songs-item:hover .user-song-actions i:nth-child(1),
+.user__songs-item:hover .user-song-actions i:nth-child(2),
+.user__songs-item:hover .user-song-actions i:nth-child(4) {
+  display: flex;
+}
+
+.user__songs-item:hover .user-song-times {
+  display: none;
+  margin-left: 0;
+}
+
 .user__songs-item-left {
   display: flex;
   width: 50%;
+  margin-left: 12px;
 }
 
 .song-prefix {
@@ -194,18 +218,41 @@
 
 .song-prefix-icon {
   font-size: 14px;
-  color: var(--song-item-action)
+  color: var(--song-item-action);
 }
 
 .song-thumb {
   width: 40px;
   height: 40px;
   margin-right: 10px;
+  position: relative;
 }
 
 .song-thumb img {
   width: 100%;
   border-radius: 4px;
+}
+
+.song-thumb-active {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.song-thumb-icons {
+  font-size: 24px;
+}
+
+.song-thumb-icons:hover {
+  filter: brightness(0.9);
+  cursor: pointer;
 }
 
 .song-info {
@@ -218,6 +265,12 @@
 .song-info h3 {
   color: #fff;
   font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .song-info a {
@@ -225,42 +278,119 @@
   font-size: 11px;
   text-align: left;
   text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .song-info a:hover {
-    text-decoration: underline;
-    color: var(--link-text-hover);
+  text-decoration: underline;
+  color: var(--link-text-hover);
 }
 
 .user__songs-item-center {
-    flex: 1;
-    flex-grow: 1;
-    
+  flex: 1;
+  flex-grow: 1;
 }
 
 .user__songs-item-center a {
-    color: var(--song-item-action);
-    font-size: 13px;
-    font-weight: 500;
-    text-decoration: none;
+  color: var(--song-item-action);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .user__songs-item-center a:hover {
-    text-decoration: underline;
-    color: var(--link-text-hover);
+  text-decoration: underline;
+  color: var(--link-text-hover);
 }
 
 .user__songs-item-right {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
 }
 
 .user-song-actions {
+  display: flex;
+  align-items: center;
+}
 
+.user-song-actions i {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 4px;
 }
 
 .user-song-icon {
-    color: var(--purple-primary);
+  color: #fff;
+  font-size: 18px;
+  /* margin-right: 20px; */
+  cursor: pointer;
+}
+
+.heart {
+  color: var(--purple-primary);
+}
+
+.user-song-actions i:hover {
+  background-color: var(--alpha-bg);
+  cursor: pointer;
+}
+
+.user-song-actions i:nth-child(1),
+.user-song-actions i:nth-child(2),
+.user-song-actions i:nth-child(4) {
+  display: none;
 }
 
 .user-song-times {
-    color: var(--song-item-action)
+  color: var(--song-item-action);
+  font-weight: 500;
+  font-size: 13px;
+  margin-left: 4px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+}
+
+.show-on-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .song-thumb img {
+    width: unset;
+    height: 100%;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .show-on-mobile {
+    display: flex !important;
+  }
+
+  .user__songs-item {
+    justify-content: space-between;
+  }
+
+  .user__songs-item-left {
+    width: 70%;
+  }
 }
