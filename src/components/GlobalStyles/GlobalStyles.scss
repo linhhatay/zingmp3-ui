@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden scroll;
+}
+
+.content {
+    height: calc(100vh - 90px);
+    flex-grow: 1;
+    position: relative;
+    padding: 0 59px;
+    overflow: hidden scroll;
+}
