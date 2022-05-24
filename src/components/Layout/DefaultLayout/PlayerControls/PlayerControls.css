@@ -134,6 +134,14 @@
     font-size: 20px;
 }
 
+.actions-icon.actions-first.active {
+    color: var(--purple-primary);
+}
+
+.actions-icon.active {
+    color: var(--purple-primary);
+}
+
 .play-pause {
     font-size: 38px;
 }
@@ -163,6 +171,11 @@
         hsla(0, 0%, 100%, 0.3) 100%
     );
     align-self: center;
+    /* -webkit-appearance: none; */
+    transition: opacity 0.2s;
+    opacity: 1;
+    -webkit-tap-highlight-color: transparent;
+    will-change: opacity;
 }
 
 .time-left {
@@ -232,7 +245,7 @@
 }
 
 .options-volume {
-    width: 70px;
+    /* width: 70px; */
     height: 15px;
     cursor: pointer;
     display: flex;
@@ -260,6 +273,7 @@
     .player {
         bottom: 45px;
         height: 45px;
+        z-index: 99;
     }
 
     .player-content {

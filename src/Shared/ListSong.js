@@ -99,6 +99,7 @@ const ListSong = [
         path: './assets/music/listSong1/song1.mp3',
         imgSrc: './assets/img/music/listSong1/song1.jpg',
         album: '',
+        duration: '04:30',
     },
     {
         id: 2,
@@ -108,6 +109,7 @@ const ListSong = [
         path: './assets/music/listSong1/song2.mp3',
         imgSrc: './assets/img/music/listSong1/song2.jpg',
         album: '',
+        duration: '03:18',
     },
     {
         id: 3,
@@ -117,6 +119,7 @@ const ListSong = [
         path: './assets/music/listSong1/song3.mp3',
         imgSrc: './assets/img/music/listSong1/song3.jpg',
         album: 'Vô Tình (Single)',
+        duration: '04:33',
     },
     {
         id: 4,
@@ -126,6 +129,7 @@ const ListSong = [
         path: './assets/music/listSong1/song4.flac',
         imgSrc: './assets/img/music/listSong1/song4.jpg',
         album: 'Boys Over Flower OST',
+        duration: '04:20',
     },
     {
         id: 5,
@@ -135,6 +139,7 @@ const ListSong = [
         path: './assets/music/listSong1/song5.mp3',
         imgSrc: './assets/img/music/listSong1/song5.jpg',
         album: 'dreeAMEE',
+        duration: '03:24',
     },
     {
         id: 6,
@@ -144,6 +149,7 @@ const ListSong = [
         path: './assets/music/listSong1/song6.mp3',
         imgSrc: './assets/img/music/listSong1/song6.jpg',
         album: '',
+        duration: '06:05',
     },
     {
         id: 7,
@@ -153,6 +159,7 @@ const ListSong = [
         path: './assets/music/listSong1/song7.mp3',
         imgSrc: './assets/img/music/listSong1/song7.jpg',
         album: 'Anh Đã Quen Với Cô Đơn (Single)',
+        duration: '03:55',
     },
     {
         id: 8,
@@ -162,6 +169,7 @@ const ListSong = [
         path: './assets/music/listSong1/song8.mp3',
         imgSrc: './assets/img/music/listSong1/song8.jpg',
         album: 'Túy Âm (Single)',
+        duration: '03:22',
     },
     {
         id: 9,
@@ -171,6 +179,7 @@ const ListSong = [
         path: './assets/music/listSong1/song9.mp3',
         imgSrc: './assets/img/music/listSong1/song9.jpg',
         album: 'Kém Duyên (Single)',
+        duration: '03:44',
     },
     {
         id: 10,
@@ -180,6 +189,7 @@ const ListSong = [
         path: './assets/music/listSong1/song10.flac',
         imgSrc: './assets/img/music/listSong1/song10.jpg',
         album: '',
+        duration: '03:08',
     },
     {
         id: 11,
@@ -189,6 +199,7 @@ const ListSong = [
         path: './assets/music/listSong1/song11.mp3',
         imgSrc: './assets/img/music/listSong1/song11.jpg',
         album: '',
+        duration: '04:15',
     },
     {
         id: 12,
@@ -198,6 +209,7 @@ const ListSong = [
         path: './assets/music/listSong1/song12.mp3',
         imgSrc: './assets/img/music/listSong1/song12.jpg',
         album: '',
+        duration: '03:53',
     },
     {
         id: 13,
@@ -207,6 +219,7 @@ const ListSong = [
         path: './assets/music/listSong1/song13.mp3',
         imgSrc: './assets/img/music/listSong1/song13.jpg',
         album: '',
+        duration: '04:07',
     },
     {
         id: 14,
@@ -216,6 +229,7 @@ const ListSong = [
         path: './assets/music/listSong1/song14.mp3',
         imgSrc: './assets/img/music/listSong1/song14.jpg',
         album: '',
+        duration: '04:13',
     },
     {
         id: 15,
@@ -225,6 +239,7 @@ const ListSong = [
         path: './assets/music/listSong1/song15.mp3',
         imgSrc: './assets/img/music/listSong1/song15.jpg',
         album: '',
+        duration: '04:42',
     },
     {
         id: 16,
@@ -234,6 +249,7 @@ const ListSong = [
         path: './assets/music/listSong1/song16.mp3',
         imgSrc: './assets/img/music/listSong1/song16.jpg',
         album: '',
+        duration: '04:08',
     },
     {
         id: 17,
@@ -243,6 +259,7 @@ const ListSong = [
         path: './assets/music/listSong1/song17.mp3',
         imgSrc: './assets/img/music/listSong1/song17.jpg',
         album: '',
+        duration: '03:17',
     },
     {
         id: 18,
@@ -252,6 +269,7 @@ const ListSong = [
         path: './assets/music/listSong1/song18.mp3',
         imgSrc: './assets/img/music/listSong1/song18.jpg',
         album: '',
+        duration: '04:05',
     },
     {
         id: 19,
@@ -261,6 +279,7 @@ const ListSong = [
         path: './assets/music/listSong1/song19.mp3',
         imgSrc: './assets/img/music/listSong1/song19.jpg',
         album: '',
+        duration: '03:11',
     },
     {
         id: 20,
@@ -270,6 +289,7 @@ const ListSong = [
         path: './assets/music/listSong1/song20.mp3',
         imgSrc: './assets/img/music/listSong1/song20.jpg',
         album: '',
+        duration: '04:16',
     },
     {
         id: 21,
@@ -279,6 +299,7 @@ const ListSong = [
         path: './assets/music/listSong1/song21.mp3',
         imgSrc: './assets/img/music/listSong1/song21.jpg',
         album: '',
+        duration: '04:04',
     },
     {
         id: 22,
@@ -288,6 +309,7 @@ const ListSong = [
         path: './assets/music/listSong2/song20.webm',
         imgSrc: './assets/img/music/listSong2/song20.jpg',
         album: 'BlackJack (Single)',
+        duration: '03:17',
     },
 ];
 export { ListSong };

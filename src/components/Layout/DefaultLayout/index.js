@@ -23,41 +23,16 @@ const DefaultLayout = ({ children }) => {
         setImage(imgSrc);
     }
 
-    const nextSong = () => {
-        setCurrentSongIndex((prev) => prev + 1);
-
-        if (currentSongIndex >= songs.length - 1) {
-            setCurrentSongIndex(0);
-        }
-
-        setSong(songs[currentSongIndex].path);
-        setImage(songs[currentSongIndex].imgSrc);
-        setSongName(songs[currentSongIndex].songName);
-        setArtist(songs[currentSongIndex].artist);
-    };
-
-    const prevSong = () => {
-        setCurrentSongIndex((prev) => prev - 1);
-
-        if (currentSongIndex <= 0) {
-            setCurrentSongIndex(songs.length - 1);
-        }
-
-        setSong(songs[currentSongIndex].path);
-        setImage(songs[currentSongIndex].imgSrc);
-        setSongName(songs[currentSongIndex].songName);
-        setArtist(songs[currentSongIndex].artist);
-    };
-
-    // useEffect(() => {
-    //     setNextSongIndex(() => {
-    //         if (currentSongIndex + 1 >= songs.length - 1) {
-    //             return 0;
-    //         } else {
-    //             return currentSongIndex + 1;
-    //         }
-    //     });
-    // }, [currentSongIndex]);
+    useEffect(() => {
+        setNextSongIndex(currentSongIndex);
+        // setNextSongIndex(() => {
+        //     if (currentSongIndex + 1 >= songs.length - 1) {
+        //         return 0;
+        //     } else {
+        //         return currentSongIndex + 1;
+        //     }
+        // });
+    }, [currentSongIndex]);
 
     // const SkipSong = (foward = true) => {
     //     if (foward) {
@@ -71,7 +46,6 @@ const DefaultLayout = ({ children }) => {
 
     //             return temp;
     //         });
-
     //     } else {
     //         setCurrentSongIndex(() => {
     //             let temp = currentSongIndex;
@@ -82,11 +56,11 @@ const DefaultLayout = ({ children }) => {
     //             }
     //             return temp;
     //         });
-    //         setSong(songs[currentSongIndex].path);
-    //         setImage(songs[currentSongIndex].imgSrc);
-    //         setSongName(songs[currentSongIndex].songName);
-    //         setArtist(songs[currentSongIndex].artist);
     //     }
+    //     setSong(songs[currentSongIndex].path);
+    //     setImage(songs[currentSongIndex].imgSrc);
+    //     setSongName(songs[currentSongIndex].songName);
+    //     setArtist(songs[currentSongIndex].artist);
     // };
 
     return (
@@ -116,16 +90,18 @@ const DefaultLayout = ({ children }) => {
                 </div>
                 <PlayerControls
                     ListSong={ListSong}
-                    nextSong={nextSong}
-                    prevSong={prevSong}
                     audioEl={audioEl}
                     songs={songs}
+                    setSong={setSong}
                     currentSongIndex={currentSongIndex}
                     setCurrentSongIndex={setCurrentSongIndex}
                     song={song}
+                    setImage={setImage}
+                    setArtist={setArtist}
                     imgSrc={image}
                     name={songName}
                     artist={artist}
+                    setSongName={setSongName}
                 />
             </div>
             <div className="background"></div>

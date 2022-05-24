@@ -7,6 +7,8 @@ import { BsFillPlayFill } from 'react-icons/bs';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 
 const User = (props) => {
+    const audioUser = useRef();
+
     useEffect(() => {
         const navItems = document.querySelectorAll('.user__nav-item');
         function handleChangeActive() {
@@ -122,6 +124,7 @@ const User = (props) => {
                                                             <a href="#">{item.artist.join(', ')}</a>
                                                         </div>
                                                     </div>
+                                                    <audio ref={audioUser} src={item.path} />
                                                     <div className="user__songs-item-center hide-on-mobile">
                                                         <a href="#">{item.album}</a>
                                                     </div>
@@ -140,7 +143,7 @@ const User = (props) => {
                                                                 <BiDotsHorizontalRounded className="user-song-icon " />
                                                             </i>
                                                             <span className="user-song-times hide-on-mobile">
-                                                                04:27
+                                                                {item.duration}
                                                             </span>
                                                         </div>
                                                         <i className="show-on-mobile">

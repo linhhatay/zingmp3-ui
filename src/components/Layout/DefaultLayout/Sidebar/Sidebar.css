@@ -440,6 +440,7 @@
         width: 100%;
         background-color: rgba(0, 0, 0, 0.2);
         border-top: 1px solid var(--border-player);
+        /* z-index: 99; */
     }
 
     .navbar {
@@ -465,12 +466,12 @@
         border-left: unset;
     }
 
-    .navbar__item a {
+    .navbar__item .navbar__link {
         padding: 0;
         flex-direction: column;
     }
 
-    .navbar__item a i {
+    .navbar__item .navbar__link i {
         font-size: 20px;
         margin-right: 0;
     }
