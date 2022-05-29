@@ -15,8 +15,15 @@ import { IoRepeat, IoVolumeMediumOutline, IoVolumeMuteOutline } from 'react-icon
 import { GiMicrophone } from 'react-icons/gi';
 import { MdOutlineQueueMusic } from 'react-icons/md';
 import { RiRepeatFill, RiRepeatOneFill } from 'react-icons/ri';
+import { useDispatch, useSelector } from 'react-redux';
+import { nextSong, prevSong, randomSong } from '../../../../redux/songSlice';
 
-const PlayerControls = (props) => {
+const PlayerControls = () => {
+    const song = useSelector((state) => state.song.song);
+    const songs = useSelector((state) => state.songs.songs);
+
+    const dispatch = useDispatch();
+
     const [isLove, setIsLove] = useState(true);
     const [isPlaying, setIsPlaying] = useState(false);
     const [durationSong, setDurationSong] = useState('00:00');
@@ -25,6 +32,15 @@ const PlayerControls = (props) => {
     const [isLoop, setIsLoop] = useState(false);
     const [isRandom, setIsRandom] = useState(false);
     const [isMuted, setIsMuted] = useState(false);
+
+    const [path, setPath] = useState(song.path);
+    const [image, setImage] = useState(song.imgSrc);
+    const [songName, setSongName] = useState(song.songName);
+    const [artist, setArtist] = useState(song.artist);
+
+    // const [song, setSong] = useState(ListSong[0].path);
+    // const [currentSongIndex, setCurrentSongIndex] = useState(0);
+    // const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
 
     const audioPlayer = useRef();
     const progressBar = useRef();
@@ -37,62 +53,40 @@ const PlayerControls = (props) => {
         setIsMuted(!isMuted);
     };
 
-    useEffect(() => {
-        console.log(audioPlayer);
-        if (isMuted) {
-            audioPlayer.current.muted = true;
-        } else {
-            audioPlayer.current.muted = false;
-        }
-    });
-
     const playRandomSong = () => {
-        let newIndexSong;
-        do {
-            newIndexSong = Math.floor(Math.random() * props.songs.length);
-        } while (newIndexSong === props.setCurrentSongIndex);
-        props.setCurrentSongIndex(newIndexSong);
-        console.log(newIndexSong);
         setIsRandom(!isRandom);
     };
 
-    useEffect(() => {
-        if (isLoop) {
-            audioPlayer.current.loop = true;
+    let newIndexSong;
+    function handleRandomSong(id) {
+        if (isRandom === true) {
+            do {
+                newIndexSong = Math.floor(Math.random() * songs.length);
+            } while (newIndexSong === song.id);
+            dispatch(nextSong(newIndexSong) || prevSong(newIndexSong));
         } else {
-            audioPlayer.current.loop = false;
+            dispatch(nextSong(id) || prevSong(id));
         }
-    });
+    }
 
-    useEffect(() => {
-        const seconds = Math.floor(audioPlayer.current.duration);
-        setDurationSong(seconds);
-    });
-
-    const nextSong = () => {
-        if (props.currentSongIndex >= props.songs.length - 1) {
-            props.setCurrentSongIndex(0);
+    const handleNextSong = () => {
+        if (song.id >= songs.length) {
+            handleRandomSong(1);
+            // dispatch(nextSong(1));
         } else {
-            props.setCurrentSongIndex((prev) => prev + 1);
+            handleRandomSong(song.id + 1);
+            // dispatch(nextSong(song.id + 1));
         }
-
-        props.setSong(props.songs[props.currentSongIndex].path);
-        props.setImage(props.songs[props.currentSongIndex].imgSrc);
-        props.setSongName(props.songs[props.currentSongIndex].songName);
-        props.setArtist(props.songs[props.currentSongIndex].artist);
     };
 
-    const prevSong = () => {
-        if (props.currentSongIndex <= 0) {
-            props.setCurrentSongIndex(props.songs.length - 1);
+    const handlePrevSong = () => {
+        if (song.id <= 1) {
+            // dispatch(prevSong(songs.length));
+            handleRandomSong(songs.length);
         } else {
-            props.setCurrentSongIndex((prev) => prev - 1);
+            // dispatch(prevSong(song.id - 1));
+            handleRandomSong(song.id - 1);
         }
-
-        props.setSong(props.songs[props.currentSongIndex].path);
-        props.setImage(props.songs[props.currentSongIndex].imgSrc);
-        props.setSongName(props.songs[props.currentSongIndex].songName);
-        props.setArtist(props.songs[props.currentSongIndex].artist);
     };
 
     const CalculateTime = (sec) => {
@@ -114,14 +108,13 @@ const PlayerControls = (props) => {
     };
 
     const handleSeekTime = (e) => {
-        console.log(e.target.value);
         const seekTime = (audioPlayer.current.duration / 100) * e.target.value;
         audioPlayer.current.currentTime = seekTime;
         setCurrentTime(seekTime);
     };
 
     const handleEndedSong = () => {
-        nextSong();
+        handleNextSong();
     };
 
     const handleChangeLove = () => {
@@ -131,6 +124,27 @@ const PlayerControls = (props) => {
     const handlePlayPause = () => {
         setIsPlaying(!isPlaying);
     };
+
+    useEffect(() => {
+        if (isLoop) {
+            audioPlayer.current.loop = true;
+        } else {
+            audioPlayer.current.loop = false;
+        }
+    });
+
+    useEffect(() => {
+        const seconds = Math.floor(audioPlayer.current.duration);
+        setDurationSong(seconds);
+    });
+
+    useEffect(() => {
+        if (isMuted) {
+            audioPlayer.current.muted = true;
+        } else {
+            audioPlayer.current.muted = false;
+        }
+    });
 
     useEffect(() => {
         if (isPlaying) {
@@ -146,11 +160,11 @@ const PlayerControls = (props) => {
                 <div className="player-controls-left">
                     <div className="media">
                         <div className="media-left">
-                            <img src={props.imgSrc} alt="media" />
+                            <img src={song.imgSrc} alt="media" />
                         </div>
                         <div className="media-content">
-                            <h3>{props.name}</h3>
-                            <p>{props.artist.join(', ')}</p>
+                            <h3>{song.songName}</h3>
+                            <p>{song.artist.join(', ')}</p>
                         </div>
                         <div className="media-right hide-on-mobile">
                             <i onClick={handleChangeLove}>{isLove ? <AiFillHeart /> : <AiOutlineHeart />}</i>
@@ -169,7 +183,7 @@ const PlayerControls = (props) => {
                                 <FaRandom className="actions-icon actions-first " />
                             )}
                         </i>
-                        <i className="hide-on-mobile" onClick={prevSong}>
+                        <i className="hide-on-mobile" onClick={handlePrevSong}>
                             <AiOutlineStepBackward className="actions-icon" />
                         </i>
                         <i onClick={handlePlayPause} className="actions-playpause">
@@ -179,7 +193,7 @@ const PlayerControls = (props) => {
                                 <AiOutlinePlayCircle className="actions-icon play-pause" />
                             )}
                         </i>
-                        <i onClick={nextSong}>
+                        <i onClick={handleNextSong}>
                             <AiOutlineStepForward className="actions-icon" />
                         </i>
                         <i className="hide-on-mobile" onClick={handleLoop}>
@@ -198,7 +212,7 @@ const PlayerControls = (props) => {
                         </span>
                         <audio
                             ref={audioPlayer}
-                            src={props.song}
+                            src={song.path}
                             onTimeUpdate={changeProgress}
                             onEnded={handleEndedSong}
                         />

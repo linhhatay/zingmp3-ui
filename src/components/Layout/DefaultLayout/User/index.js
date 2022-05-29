@@ -5,9 +5,16 @@ import { CgMusic } from 'react-icons/cg';
 import { GiMicrophone } from 'react-icons/gi';
 import { BsFillPlayFill } from 'react-icons/bs';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
+import { useDispatch, useSelector } from 'react-redux';
+import { getPlayerMusic } from '../../../../redux/songSlice';
 
 const User = (props) => {
     const audioUser = useRef();
+
+    const dispatch = useDispatch();
+
+    const song = useSelector((state) => state.song.song);
+    const songs = useSelector((state) => state.songs.songs);
 
     useEffect(() => {
         const navItems = document.querySelectorAll('.user__nav-item');
@@ -52,8 +59,8 @@ const User = (props) => {
         });
     }, []);
 
-    const sendData = (path, songName, artist, imgSrc) => {
-        props.setMainSong(path, songName, artist, imgSrc);
+    const sendData = (idSong) => {
+        dispatch(getPlayerMusic(idSong));
     };
 
     return (
@@ -98,16 +105,12 @@ const User = (props) => {
                                 </div>
                                 <div className="user__songs-list">
                                     <div className="user__songs-select">
-                                        {props.ListSong &&
-                                            props.ListSong.map((item) => (
+                                        {songs &&
+                                            songs.map((item) => (
                                                 <div
-                                                    className={`user__songs-item ${
-                                                        props.currrentSongIndex === item.id && 'active'
-                                                    }`}
+                                                    className={`user__songs-item ${item.id === song.id && 'active'}`}
                                                     key={item.id}
-                                                    onClick={() =>
-                                                        sendData(item.path, item.songName, item.artist, item.imgSrc)
-                                                    }
+                                                    onClick={() => sendData(item.id)}
                                                 >
                                                     <div className="user__songs-item-left">
                                                         <div className="song-prefix">

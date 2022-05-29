@@ -51,6 +51,7 @@
 .media-content {
     color: #fff;
     max-width: 155px;
+    overflow: hidden;
 }
 
 .media-content h3 {
@@ -222,6 +223,7 @@
 .options-item:last-child {
     background-color: hsla(0, 0%, 100%, 0.1);
     border-radius: 4px;
+    margin-left: 4px;
 }
 
 .options-item:last-child:hover {
@@ -246,7 +248,7 @@
 
 .options-volume {
     /* width: 70px; */
-    height: 15px;
+    /* height: 15px; */
     cursor: pointer;
     display: flex;
     align-items: center;
