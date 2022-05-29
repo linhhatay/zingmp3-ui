@@ -69,6 +69,14 @@ const PlayerControls = () => {
         }
     }
 
+    const scrollIntoView = () => {
+        audioPlayer.current.scrollIntoViewIfNeeded({
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'center',
+        });
+    };
+
     const handleNextSong = () => {
         if (song.id >= songs.length) {
             handleRandomSong(1);
@@ -76,6 +84,7 @@ const PlayerControls = () => {
         } else {
             handleRandomSong(song.id + 1);
             // dispatch(nextSong(song.id + 1));
+            scrollIntoView();
         }
     };
 
