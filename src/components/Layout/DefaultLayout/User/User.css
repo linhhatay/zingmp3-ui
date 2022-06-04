@@ -226,6 +226,12 @@
     height: 40px;
     margin-right: 10px;
     position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.song-thumb:hover {
+    cursor: pointer;
 }
 
 .song-thumb img {

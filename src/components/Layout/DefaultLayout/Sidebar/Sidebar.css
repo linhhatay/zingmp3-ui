@@ -373,13 +373,13 @@
         border-left: unset;
     }
 
-    .navbar__item a,
+    .navbar__item .navbar__link,
     .navbar__sub-item a {
         padding: 15px 0;
         justify-content: center;
     }
 
-    .navbar__item a i,
+    .navbar__item .navbar__link i,
     .navbar__sub-item a i {
         margin-right: 0;
     }

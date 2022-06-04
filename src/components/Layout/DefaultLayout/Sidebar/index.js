@@ -5,9 +5,15 @@ import MenuList from '~/Shared/MenuList';
 import './Sidebar.css';
 import { LibrarySidebar } from '~/components/Layout/DefaultLayout/LibrarySidebar/LibrarySidebar';
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { showToast, hideToast } from '../../../../redux/reducer/toastSlice';
+import Toast from '../../../../toast/index';
 
 const Sidebar = () => {
-    const [route, setRoute] = useState(MenuList[0][0].route);
+    // const [route, setRoute] = useState(MenuList[0][0].route);
+
+    const toast = useSelector((state) => state.toast);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         const items = document.querySelectorAll('.navbar__item');
@@ -20,10 +26,15 @@ const Sidebar = () => {
                 this.classList.add('active');
             });
 
-            itemSubs.forEach((item) => {
-                item.classList.remove('active');
-                this.classList.add('active');
-            });
+            // itemSubs.forEach((item) => {
+            //     // item.classList.remove('active');
+            //     // this.classList.add('active');
+            //     dispatch(showToast());
+            // });
+        }
+
+        function handleShowToast() {
+            dispatch(showToast());
         }
 
         items.forEach((item) => {
@@ -31,12 +42,23 @@ const Sidebar = () => {
         });
 
         itemSubs.forEach((item) => {
-            item.addEventListener('click', handleChangeActive);
+            item.addEventListener('click', handleShowToast);
         });
     });
 
+    useEffect(() => {
+        const interval = setTimeout(() => {
+            dispatch(hideToast());
+        }, 2000);
+
+        return () => {
+            clearTimeout(interval);
+        };
+    }, [toast.status]);
+
     return (
         <div className="sidebar">
+            {toast.status && <Toast />}
             <div className="sidebar-logo hide-on-mobile">
                 <img
                     src="https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg"
@@ -52,11 +74,11 @@ const Sidebar = () => {
                     {MenuList[0] &&
                         MenuList[0].map((item) => (
                             <li className="navbar__item" key={item.id}>
-                                <a className="navbar__link">
+                                <Link to={item.route} className="navbar__link">
                                     <i>{item.icon}</i>
                                     <span className="hide-on-tablet">{item.name}</span>
                                     <img src={item.figure} className="hide-on-tablet hide-on-mobile" />
-                                </a>
+                                </Link>
                             </li>
                         ))}
                 </ul>

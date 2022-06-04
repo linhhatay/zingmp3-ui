@@ -143,7 +143,7 @@ const HeaderOptions = [
                 src="https://s120-ava-talk-zmp3.zmdcdn.me/4/9/c/2/3/120/77c2701755730a0d359c126495d2801c.jpg"
             />
         ),
-        title: '',
+        title: 'Cá nhân',
     },
 ];
 

@@ -1,0 +1,15 @@
+.wrapper {
+    // position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    background-color: var(--primary-bg);
+    z-index: 5;
+    display: block;
+    border-radius: 8px;
+    // border-bottom-right-radius: 20px;
+    box-shadow: 0 4px 6px 0 rgb(32 33 36 / 28%);
+    padding: 13px 10px;
+    color: var(--text-primary);
+}

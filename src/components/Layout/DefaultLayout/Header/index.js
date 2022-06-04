@@ -1,7 +1,14 @@
+import Tippy from '@tippyjs/react';
+import classNames from 'classnames/bind';
 import React from 'react';
-import './Header.css';
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import 'tippy.js/dist/tippy.css';
 import HeaderOptions from '~/Shared/HeaderOptions';
-import { BsArrowLeft, BsArrowRight, BsSearch } from 'react-icons/bs';
+import Search from '../Search/index';
+import './Header.css';
+import styles from './Header.module.scss';
+
+const cx = classNames.bind(styles);
 
 const Header = () => {
     return (
@@ -15,27 +22,16 @@ const Header = () => {
                         <BsArrowRight className="btn-icon" />
                     </button>
                 </div>
-                <form className="search">
-                    <div className="search-container">
-                        <button className="search-btn">
-                            <BsSearch className="search-btn-icon" />
-                        </button>
-                        <div className="search-wrapper">
-                            <input
-                                type="text"
-                                className="search-input"
-                                placeholder="Nhập tên bài hát, nghệ sĩ hoặc MV ..."
-                            />
-                        </div>
-                    </div>
-                </form>
+                <Search />
             </div>
             <div className="header-right">
                 {HeaderOptions &&
                     HeaderOptions.map((item, index) => (
-                        <div key={index} className="header-right-option">
-                            <div className="header-right-icon">{item.icon}</div>
-                        </div>
+                        <Tippy key={index} delay={[0, 50]} content={item.title} placement="bottom">
+                            <div className="header-right-option">
+                                <div className="header-right-icon">{item.icon}</div>
+                            </div>
+                        </Tippy>
                     ))}
             </div>
         </div>

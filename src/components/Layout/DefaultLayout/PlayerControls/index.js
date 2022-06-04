@@ -17,6 +17,8 @@ import { MdOutlineQueueMusic } from 'react-icons/md';
 import { RiRepeatFill, RiRepeatOneFill } from 'react-icons/ri';
 import { useDispatch, useSelector } from 'react-redux';
 import { nextSong, prevSong, randomSong } from '../../../../redux/songSlice';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 const PlayerControls = () => {
     const song = useSelector((state) => state.song.song);
@@ -58,7 +60,7 @@ const PlayerControls = () => {
     };
 
     let newIndexSong;
-    function handleRandomSong(id) {
+    const handleRandomSong = (id) => {
         if (isRandom === true) {
             do {
                 newIndexSong = Math.floor(Math.random() * songs.length);
@@ -67,7 +69,7 @@ const PlayerControls = () => {
         } else {
             dispatch(nextSong(id) || prevSong(id));
         }
-    }
+    };
 
     const scrollIntoView = () => {
         audioPlayer.current.scrollIntoViewIfNeeded({
@@ -244,15 +246,21 @@ const PlayerControls = () => {
                 </div>
                 <div className="player-controls-right hide-on-mobile">
                     <div className="options">
-                        <div className="options-item">
-                            <AiOutlineVideoCamera className="options-icon" />
-                        </div>
-                        <div className="options-item">
-                            <GiMicrophone className="options-icon" />
-                        </div>
-                        <div className="options-item">
-                            <BiWindows className="options-icon" />
-                        </div>
+                        <Tippy delay={[0, 50]} content="MV" placement="top">
+                            <div className="options-item">
+                                <AiOutlineVideoCamera className="options-icon" />
+                            </div>
+                        </Tippy>
+                        <Tippy delay={[0, 50]} content="Xem lời bài hát" placement="top">
+                            <div className="options-item">
+                                <GiMicrophone className="options-icon" />
+                            </div>
+                        </Tippy>
+                        <Tippy delay={[0, 50]} content="Chế độ cửa sổ" placement="top">
+                            <div className="options-item">
+                                <BiWindows className="options-icon" />
+                            </div>
+                        </Tippy>
                         <div className="options-item" onClick={muteVolume}>
                             {isMuted ? (
                                 <IoVolumeMuteOutline className="options-icon" />
@@ -264,9 +272,11 @@ const PlayerControls = () => {
                             <div className="volume-range"></div>
                         </div>
                         <div className="options-separate"></div>
-                        <div className="options-item">
-                            <MdOutlineQueueMusic className="options-icon" />
-                        </div>
+                        <Tippy delay={[0, 50]} content="Danh sách phát" placement="top">
+                            <div className="options-item">
+                                <MdOutlineQueueMusic className="options-icon" />
+                            </div>
+                        </Tippy>
                     </div>
                 </div>
             </div>

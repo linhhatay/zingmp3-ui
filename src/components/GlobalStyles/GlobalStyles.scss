@@ -30,6 +30,14 @@ body ::-webkit-scrollbar-track {
     overflow: hidden scroll;
 }
 
+// custom tippy tooltip
+body {
+    .tippy-box {
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .content {
         padding: 0;

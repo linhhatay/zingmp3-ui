@@ -52,6 +52,7 @@ input[type='range']::-webkit-slider-thumb {
 } */
 
 :root {
+    --primary-bg: #192f60;
     --layout-bg: #061d50;
     --text-primary: #fff;
     --img-logo-mp3: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg');

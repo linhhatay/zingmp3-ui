@@ -1,0 +1,29 @@
+.search-result {
+    width: 100%;
+    max-width: 540px;
+    width: 540px;
+}
+
+.search-title {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0 10px 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-suggest {
+    max-height: calc(100vh - 180px);
+    overflow-y: auto;
+}
+
+.search-icon {
+    color: #dadada;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .search-result {
+        width: 250px;
+    }
+}
