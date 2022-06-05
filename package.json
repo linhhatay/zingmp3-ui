@@ -1,6 +1,6 @@
 {
-    "homepage": "https://linhhatay.github.io/zingmp3",
-    "name": "zingmp3",
+    "homepage": "https://linhhatay.github.io/zingmp3-clone",
+    "name": "zingmp3-clone",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
