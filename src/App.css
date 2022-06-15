@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -47,9 +47,6 @@ input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
 }
 
-/* ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
-} */
 
 :root {
     --primary-bg: #192f60;
@@ -75,7 +72,7 @@ input[type='range']::-webkit-slider-thumb {
     position: relative;
     overflow: hidden;
     /* display: flex; */
-}
+/* }
 
 .background {
     position: absolute;
@@ -88,4 +85,4 @@ input[type='range']::-webkit-slider-thumb {
     background-color: var(--layout-bg);
     background-size: 1920px auto;
     background-repeat: repeat;
-}
+} */

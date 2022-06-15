@@ -38,6 +38,104 @@ body {
     }
 }
 
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsla(0, 0%, 100%, 0.3);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    scrollbar-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input[type='range']::-moz-range-thumb {
+    height: 2px;
+    width: 2px;
+    background: #ffffff;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    height: 2px;
+    width: 2px;
+    border-radius: 5px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+button,
+input[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --primary-bg: #192f60;
+    --layout-bg: #061d50;
+    --text-primary: #fff;
+    --img-logo-mp3: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg');
+    --sidebar-bg: hsla(0, 0%, 100%, 0.05);
+    --alpha-bg: hsla(0, 0%, 100%, 0.1);
+    --purple-primary: #3460f5;
+    --border-primary: hsla(0, 0%, 100%, 0.1);
+    --sidebar-popup-bg: #1d2a49;
+    --player-bg: rgba(0, 0, 0, 0.2);
+    --border-player: hsla(0, 0%, 100%, 0.1);
+    --text-secondary: hsla(0, 0%, 100%, 0.5);
+    --link-text-hover: #6e8ffb;
+    --border-secondary: hsla(0, 0%, 100%, 0.05);
+    --song-item-action: hsla(0, 0%, 100%, 0.5);
+}
+
+.App {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    /* display: flex; */
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../../../public/assets/img/themeBgs/listTheme2/theme1.jpg);
+    z-index: -1;
+    background-color: var(--layout-bg);
+    background-size: 1920px auto;
+    background-repeat: repeat;
+}
+
 @media screen and (max-width: 768px) {
     .content {
         padding: 0;
