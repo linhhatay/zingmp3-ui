@@ -29,27 +29,27 @@
     cursor: pointer;
 }
 
-.upload-btn {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
+.icon + .title,
+.title + .icon {
+    margin-left: 10px;
 }
 
-.upload-btn span input[type='file'] {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    cursor: pointer;
+.title {
+    line-height: 20px;
+    width: 100%;
+    display: flex;
 }
 
-// .icon + span,
-// span + .icon {
-//     margin-left: 10px;
+// .icon {
+//     display: inline-flex;
+//     width: 20px;
+//     height: 20px;
+//     text-align: center;
+//     justify-content: center;
+//     align-items: center;
 // }
 
+//Button styles
 .rounded {
     color: #fff;
     font-weight: 600;

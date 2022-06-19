@@ -1,5 +1,5 @@
 import React from 'react';
-import LibraryList from '../../../../Shared/LibraryList';
+import LibraryList from '~/shared/LibraryList';
 
 const LibrarySidebar = ({ title, icon }) => {
     return (

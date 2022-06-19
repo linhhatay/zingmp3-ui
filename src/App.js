@@ -1,9 +1,17 @@
-import './App.css';
-import './Styles/Grid.css';
 import { Fragment } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { publicRoutes } from '~/routes';
-import { DefaultLayout } from '~/components/Layout';
+import './App.css';
+import './styles/Grid.css';
+
+import DefaultLayout from '~/layouts';
+import config from './config';
+import Album from './layouts/DefaultLayout/User/Album';
+import MV from './layouts/DefaultLayout/User/MV';
+import MyMusic from './layouts/DefaultLayout/User/MyMusic';
+import Podcast from './layouts/DefaultLayout/User/Podcast';
+import Song from './layouts/DefaultLayout/User/Song';
+import Upload from './layouts/DefaultLayout/User/Upload';
 
 function App() {
     function hasTouch() {
@@ -54,7 +62,15 @@ function App() {
                                         <Page />
                                     </Layout>
                                 }
-                            />
+                            >
+                                <Route path={config.routes.song} element={<Song></Song>}>
+                                    <Route path={config.routes.favorite} element={<MyMusic />} />
+                                    <Route path={config.routes.upload} element={<Upload />} />
+                                </Route>
+                                <Route path={config.routes.podcast} element={<Podcast />}></Route>
+                                <Route path={config.routes.album} element={<Album />}></Route>
+                                <Route path={config.routes.mv} element={<MV />}></Route>
+                            </Route>
                         );
                     })}
                 </Routes>

@@ -11,18 +11,21 @@ import {
 } from 'react-icons/ai';
 import { BiDotsHorizontalRounded, BiWindows } from 'react-icons/bi';
 import { FaRandom } from 'react-icons/fa';
-import { IoRepeat, IoVolumeMediumOutline, IoVolumeMuteOutline } from 'react-icons/io5';
+import { IoVolumeMediumOutline, IoVolumeMuteOutline } from 'react-icons/io5';
 import { GiMicrophone } from 'react-icons/gi';
 import { MdOutlineQueueMusic } from 'react-icons/md';
 import { RiRepeatFill, RiRepeatOneFill } from 'react-icons/ri';
 import { useDispatch, useSelector } from 'react-redux';
-import { nextSong, prevSong, randomSong } from '../../../../redux/songSlice';
+import { nextSong, prevSong } from '~/redux/reducer/songSlice';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import { showToast } from '~/redux/reducer/toastSlice';
 
 const PlayerControls = () => {
     const song = useSelector((state) => state.song.song);
     const songs = useSelector((state) => state.songs.songs);
+
+    const toast = useSelector((state) => state.toast);
 
     const dispatch = useDispatch();
 
@@ -34,15 +37,6 @@ const PlayerControls = () => {
     const [isLoop, setIsLoop] = useState(false);
     const [isRandom, setIsRandom] = useState(false);
     const [isMuted, setIsMuted] = useState(false);
-
-    const [path, setPath] = useState(song.path);
-    const [image, setImage] = useState(song.imgSrc);
-    const [songName, setSongName] = useState(song.songName);
-    const [artist, setArtist] = useState(song.artist);
-
-    // const [song, setSong] = useState(ListSong[0].path);
-    // const [currentSongIndex, setCurrentSongIndex] = useState(0);
-    // const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
 
     const audioPlayer = useRef();
     const progressBar = useRef();
@@ -247,7 +241,7 @@ const PlayerControls = () => {
                 <div className="player-controls-right hide-on-mobile">
                     <div className="options">
                         <Tippy delay={[0, 50]} content="MV" placement="top">
-                            <div className="options-item">
+                            <div className="options-item" onClick={() => dispatch(showToast())}>
                                 <AiOutlineVideoCamera className="options-icon" />
                             </div>
                         </Tippy>
@@ -257,7 +251,7 @@ const PlayerControls = () => {
                             </div>
                         </Tippy>
                         <Tippy delay={[0, 50]} content="Chế độ cửa sổ" placement="top">
-                            <div className="options-item">
+                            <div className="options-item" onClick={() => dispatch(showToast())}>
                                 <BiWindows className="options-icon" />
                             </div>
                         </Tippy>
@@ -273,7 +267,7 @@ const PlayerControls = () => {
                         </div>
                         <div className="options-separate"></div>
                         <Tippy delay={[0, 50]} content="Danh sách phát" placement="top">
-                            <div className="options-item">
+                            <div className="options-item" onClick={() => dispatch(showToast())}>
                                 <MdOutlineQueueMusic className="options-icon" />
                             </div>
                         </Tippy>

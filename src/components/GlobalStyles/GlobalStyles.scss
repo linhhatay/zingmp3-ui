@@ -97,6 +97,22 @@ a {
     text-decoration: none;
 }
 
+.upload-btn {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.upload-btn input[type='file'] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
 :root {
     --primary-bg: #192f60;
     --layout-bg: #061d50;
@@ -129,7 +145,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url(../../../public/assets/img/themeBgs/listTheme2/theme1.jpg);
+    background: url(../../assets/img/themeBgs/listTheme2/theme1.jpg);
     z-index: -1;
     background-color: var(--layout-bg);
     background-size: 1920px auto;

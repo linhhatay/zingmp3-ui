@@ -1,7 +1,1 @@
-import React from 'react';
-
-const Discover = () => {
-    return <h2>Discover</h2>;
-};
-
-export default Discover;
+export { default } from './Discover';

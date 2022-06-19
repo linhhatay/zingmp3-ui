@@ -11,13 +11,13 @@ const MenuList = [
             id: 1,
             icon: <RiFolderMusicLine />,
             name: 'Cá Nhân',
-            route: '/',
+            route: '/mymusic',
         },
         {
             id: 2,
             icon: <FiDisc />,
             name: 'Khám Phá',
-            route: '/discover',
+            route: '/',
         },
         {
             id: 3,

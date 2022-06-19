@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { ListSong } from '../Shared/ListSong';
+import { ListSong } from '../../shared/ListSong';
 
 export const songsSlice = createSlice({
     name: 'song',

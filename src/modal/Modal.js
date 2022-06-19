@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import { CgClose } from 'react-icons/cg';
-import listThemes from '~/Shared/ListThemes';
+import listThemes from '~/shared/ListThemes';
 import styles from './Modal.module.scss';
 
 const cx = classNames.bind(styles);

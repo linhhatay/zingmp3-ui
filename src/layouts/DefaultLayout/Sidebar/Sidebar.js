@@ -1,13 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { AiOutlinePlus, AiOutlineRight } from 'react-icons/ai';
 import { BsPencil } from 'react-icons/bs';
-import MenuList from '~/Shared/MenuList';
+import MenuList from '~/shared/MenuList';
+import Menu, { MenuItem } from './Menu';
 import './Sidebar.css';
-import { LibrarySidebar } from '~/components/Layout/DefaultLayout/LibrarySidebar/LibrarySidebar';
+import { LibrarySidebar } from '~/layouts/DefaultLayout/Sidebar/LibrarySidebar/LibrarySidebar';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { showToast, hideToast } from '../../../../redux/reducer/toastSlice';
-import Toast from '../../../../toast/index';
+import { showToast, hideToast } from '../../../redux/reducer/toastSlice';
+import Toast from '../../../toast/index';
+
+import { RiFolderMusicLine, RiNeteaseCloudMusicLine } from 'react-icons/ri';
+import { FiDisc } from 'react-icons/fi';
+import { HiOutlineClipboardList } from 'react-icons/hi';
+import { CgDisc, CgMusic } from 'react-icons/cg';
+import { BiCategoryAlt } from 'react-icons/bi';
+import { AiOutlineStar, AiOutlineVideoCamera } from 'react-icons/ai';
+import config from '~/config';
 
 const Sidebar = () => {
     // const [route, setRoute] = useState(MenuList[0][0].route);
@@ -15,36 +24,36 @@ const Sidebar = () => {
     const toast = useSelector((state) => state.toast);
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        const items = document.querySelectorAll('.navbar__item');
-        const itemSubs = document.querySelectorAll('.navbar__sub-item');
-        items[0].classList.add('active');
+    // useEffect(() => {
+    //     const items = document.querySelectorAll('.navbar__item');
+    //     const itemSubs = document.querySelectorAll('.navbar__sub-item');
+    //     items[0].classList.add('active');
 
-        function handleChangeActive() {
-            items.forEach((item) => {
-                item.classList.remove('active');
-                this.classList.add('active');
-            });
+    //     function handleChangeActive() {
+    //         items.forEach((item) => {
+    //             item.classList.remove('active');
+    //             this.classList.add('active');
+    //         });
 
-            // itemSubs.forEach((item) => {
-            //     // item.classList.remove('active');
-            //     // this.classList.add('active');
-            //     dispatch(showToast());
-            // });
-        }
+    //         // itemSubs.forEach((item) => {
+    //         //     // item.classList.remove('active');
+    //         //     // this.classList.add('active');
+    //         //     dispatch(showToast());
+    //         // });
+    //     }
 
-        function handleShowToast() {
-            dispatch(showToast());
-        }
+    //     function handleShowToast() {
+    //         dispatch(showToast());
+    //     }
 
-        items.forEach((item) => {
-            item.addEventListener('click', handleChangeActive);
-        });
+    //     items.forEach((item) => {
+    //         item.addEventListener('click', handleChangeActive);
+    //     });
 
-        itemSubs.forEach((item) => {
-            item.addEventListener('click', handleShowToast);
-        });
-    });
+    //     itemSubs.forEach((item) => {
+    //         item.addEventListener('click', handleShowToast);
+    //     });
+    // });
 
     useEffect(() => {
         const interval = setTimeout(() => {
@@ -71,6 +80,11 @@ const Sidebar = () => {
             </div>
             <div className="navbar">
                 <ul className="navbar__menu">
+                    {/* <Menu>
+                        <MenuItem title="Cá nhân" to={config.routes.home} icon={<RiFolderMusicLine />} />
+                        <MenuItem title="Khám phá" to={config.routes.discover} icon={<FiDisc />} />
+                        <MenuItem title="#zingchart" to={config.routes.zingchart} icon={<CgDisc />} />
+                    </Menu> */}
                     {MenuList[0] &&
                         MenuList[0].map((item) => (
                             <li className="navbar__item" key={item.id}>
