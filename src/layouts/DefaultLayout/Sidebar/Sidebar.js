@@ -6,12 +6,10 @@ import { Link } from 'react-router-dom';
 import { LibrarySidebar } from '~/layouts/DefaultLayout/Sidebar/LibrarySidebar/LibrarySidebar';
 import MenuList from '~/shared/MenuList';
 import { hideToast, showToast } from '../../../redux/reducer/toastSlice';
-import Toast from '../../../toast/index';
+import Toast from '~/components/Toast';
 import './Sidebar.css';
 
 const Sidebar = () => {
-    // const [route, setRoute] = useState(MenuList[0][0].route);
-
     const toast = useSelector((state) => state.toast);
     const dispatch = useDispatch();
 

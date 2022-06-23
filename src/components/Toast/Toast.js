@@ -5,7 +5,7 @@ import styles from './Toast.module.scss';
 import { MdNotifications } from 'react-icons/md';
 import { FaTimes } from 'react-icons/fa';
 import { useDispatch, useSelector } from 'react-redux';
-import { hideToast } from '../redux/reducer/toastSlice';
+import { hideToast } from '~/redux/reducer/toastSlice';
 
 const cx = classNames.bind(styles);
 
