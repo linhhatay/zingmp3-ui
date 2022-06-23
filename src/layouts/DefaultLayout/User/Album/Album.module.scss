@@ -1,0 +1,19 @@
+.album {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.album__icon {
+    background-image: url('https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/icons/empty-album-dark.png');
+    width: 120px;
+    height: 120px;
+}
+
+.album__desc {
+    font-size: 16px;
+    margin-top: 16px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}

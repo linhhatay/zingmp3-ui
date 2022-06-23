@@ -4,11 +4,11 @@ const listThemes = [
         themes: [
             {
                 name: 'Zing Music Awards',
-                image: './assets/img/modalThemes/modalTheme1/theme1.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/zma.jpg',
             },
             {
                 name: 'Tháp Eiffel',
-                image: './assets/img/modalThemes/modalTheme1/theme2.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/eiffel.jpg',
             },
         ],
     },
@@ -16,28 +16,28 @@ const listThemes = [
         type: 'Nghệ Sĩ',
         themes: [
             {
-                name: 'Rosé',
-                image: './assets/img/modalThemes/modalTheme2/theme1.jpg',
+                name: 'Rose',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/rose.jpg',
             },
             {
                 name: 'IU',
-                image: './assets/img/modalThemes/modalTheme2/theme2.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/iu.jpg',
             },
             {
                 name: 'Ji Chang Wook',
-                image: './assets/img/modalThemes/modalTheme2/theme3.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/ji-chang-wook.jpg',
             },
             {
                 name: 'Lisa',
-                image: './assets/img/modalThemes/modalTheme2/theme4.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/lisa.jpg',
             },
             {
                 name: 'Jennie Kim',
-                image: './assets/img/modalThemes/modalTheme2/theme5.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/jennie.jpg',
             },
             {
                 name: 'Jisoo',
-                image: './assets/img/modalThemes/modalTheme2/theme6.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/jisoo.jpg',
             },
         ],
     },
@@ -46,35 +46,35 @@ const listThemes = [
         themes: [
             {
                 name: 'Tối',
-                image: './assets/img/modalThemes/modalTheme3/theme1.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/dark.jpg',
             },
             {
                 name: 'Tím',
-                image: './assets/img/modalThemes/modalTheme3/theme2.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/purple.jpg',
             },
             {
                 name: 'Xanh Đậm',
-                image: './assets/img/modalThemes/modalTheme3/theme3.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/blue.jpg',
             },
             {
                 name: 'Xanh Biển',
-                image: './assets/img/modalThemes/modalTheme3/theme4.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/blue-light.jpg',
             },
             {
                 name: 'Xanh Lá',
-                image: './assets/img/modalThemes/modalTheme3/theme5.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/green.jpg',
             },
             {
                 name: 'Nâu',
-                image: './assets/img/modalThemes/modalTheme3/theme6.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/brown.jpg',
             },
             {
                 name: 'Hồng',
-                image: './assets/img/modalThemes/modalTheme3/theme7.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/pink.jpg',
             },
             {
                 name: 'Đỏ',
-                image: './assets/img/modalThemes/modalTheme3/theme8.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/red.jpg',
             },
         ],
     },
@@ -83,19 +83,19 @@ const listThemes = [
         themes: [
             {
                 name: 'Sáng',
-                image: './assets/img/modalThemes/modalTheme4/theme1.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/light.jpg',
             },
             {
                 name: 'Xám',
-                image: './assets/img/modalThemes/modalTheme4/theme2.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/gray.jpg',
             },
             {
                 name: 'Xanh Nhạt',
-                image: './assets/img/modalThemes/modalTheme4/theme3.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/green-light.jpg',
             },
             {
                 name: 'Hồng Cánh Sen',
-                image: './assets/img/modalThemes/modalTheme4/theme4.jpg',
+                image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/pink-light.jpg',
             },
         ],
     },

@@ -20,6 +20,7 @@ import { nextSong, prevSong } from '~/redux/reducer/songSlice';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import { showToast } from '~/redux/reducer/toastSlice';
+import { getListSong } from '~/redux/reducer/songsSlice';
 
 const PlayerControls = () => {
     const song = useSelector((state) => state.song.song);
@@ -74,23 +75,23 @@ const PlayerControls = () => {
     };
 
     const handleNextSong = () => {
-        if (song.id >= songs.length) {
+        if (song.position >= songs.length) {
             handleRandomSong(1);
             // dispatch(nextSong(1));
         } else {
-            handleRandomSong(song.id + 1);
-            // dispatch(nextSong(song.id + 1));
+            handleRandomSong(song.position + 1);
+            // dispatch(nextSong(song.position + 1));
             scrollIntoView();
         }
     };
 
     const handlePrevSong = () => {
-        if (song.id <= 1) {
+        if (song.position <= 1) {
             // dispatch(prevSong(songs.length));
             handleRandomSong(songs.length);
         } else {
-            // dispatch(prevSong(song.id - 1));
-            handleRandomSong(song.id - 1);
+            // dispatch(prevSong(song.position - 1));
+            handleRandomSong(song.position - 1);
         }
     };
 
@@ -165,11 +166,11 @@ const PlayerControls = () => {
                 <div className="player-controls-left">
                     <div className="media">
                         <div className="media-left">
-                            <img src={song.imgSrc} alt="media" />
+                            <img src={song.thumbnail} alt="media" />
                         </div>
                         <div className="media-content">
-                            <h3>{song.songName}</h3>
-                            <p>{song.artist.join(', ')}</p>
+                            <h3>{song.name}</h3>
+                            <p>{song.artists_names}</p>
                         </div>
                         <div className="media-right hide-on-mobile">
                             <i onClick={handleChangeLove}>{isLove ? <AiFillHeart /> : <AiOutlineHeart />}</i>
@@ -217,7 +218,7 @@ const PlayerControls = () => {
                         </span>
                         <audio
                             ref={audioPlayer}
-                            src={song.path}
+                            src={song.link}
                             onTimeUpdate={changeProgress}
                             onEnded={handleEndedSong}
                         />

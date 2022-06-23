@@ -12,7 +12,7 @@ import styles from './Search.module.scss';
 
 const cx = classNames.bind(styles);
 
-const Searc = () => {
+const Search = () => {
     const [searchValue, setSearchValue] = useState('');
     const [searchResult, setSearchResult] = useState([]);
     const [showResult, setShowResult] = useState(true);
@@ -30,7 +30,7 @@ const Searc = () => {
             setSearchResult([]);
             return;
         }
-        fetch(`https://music-player-pink.vercel.app/api/search?keyword=${encodeURIComponent(debounce)}`)
+        fetch(`http://ac.mp3.zing.vn/complete?type=artist,song,key,code&num=500&query ${encodeURIComponent(debounce)}`)
             .then((res) => res.json())
             .then((res) => {
                 setSearchResult(res.data.songs);
@@ -90,4 +90,4 @@ const Searc = () => {
     );
 };
 
-export default Searc;
+export default Search;

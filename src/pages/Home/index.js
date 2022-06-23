@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { nestedRoutes } from '~/routes';
 import useRoutes from 'react-router-dom';
 import Song from '~/layouts/DefaultLayout/User/Song';
-import MyMusic from '~/layouts/DefaultLayout/User/MyMusic';
+import MyMusic from '~/layouts/DefaultLayout/User/Song/MyMusic';
 
 const Home = ({ children }) => {
     return (

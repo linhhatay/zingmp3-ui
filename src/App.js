@@ -8,10 +8,13 @@ import DefaultLayout from '~/layouts';
 import config from './config';
 import Album from './layouts/DefaultLayout/User/Album';
 import MV from './layouts/DefaultLayout/User/MV';
-import MyMusic from './layouts/DefaultLayout/User/MyMusic';
+import MyMusic from './layouts/DefaultLayout/User/Song/MyMusic';
 import Podcast from './layouts/DefaultLayout/User/Podcast';
 import Song from './layouts/DefaultLayout/User/Song';
-import Upload from './layouts/DefaultLayout/User/Upload';
+import Upload from './layouts/DefaultLayout/User/Song/Upload';
+import NewEpisode from './layouts/DefaultLayout/User/Podcast/NewEpisode';
+import SaveEpisode from './layouts/DefaultLayout/User/Podcast/SaveEpisode';
+import FollowedProgram from './layouts/DefaultLayout/User/Podcast/FollowedProgram';
 
 function App() {
     function hasTouch() {
@@ -67,7 +70,11 @@ function App() {
                                     <Route path={config.routes.favorite} element={<MyMusic />} />
                                     <Route path={config.routes.upload} element={<Upload />} />
                                 </Route>
-                                <Route path={config.routes.podcast} element={<Podcast />}></Route>
+                                <Route path={config.routes.podcast} element={<Podcast />}>
+                                    <Route path={config.routes.newEpisode} element={<NewEpisode />} />
+                                    <Route path={config.routes.savedEpisode} element={<SaveEpisode />} />
+                                    <Route path={config.routes.followedProgram} element={<FollowedProgram />} />
+                                </Route>
                                 <Route path={config.routes.album} element={<Album />}></Route>
                                 <Route path={config.routes.mv} element={<MV />}></Route>
                             </Route>

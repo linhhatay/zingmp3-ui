@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { AiOutlinePlayCircle } from 'react-icons/ai';
 import { Outlet } from 'react-router-dom';
 import Button from '~/components/Button';
+import Song from './Song';
+import MyMusic from './Song/MyMusic';
 import './User.css';
 
 const User = ({ children }) => {
@@ -49,7 +51,7 @@ const User = ({ children }) => {
                         <div className="user__nav">
                             <div className="user__nav-content">
                                 <nav className="user__nav-list">
-                                    <Button text className="user__nav-item" to="/mymusic/song/favorite">
+                                    <Button text className="user__nav-item" to="/mymusic/song">
                                         BÀI HÁT
                                     </Button>
                                     <Button text className="user__nav-item" to="/mymusic/podcast">

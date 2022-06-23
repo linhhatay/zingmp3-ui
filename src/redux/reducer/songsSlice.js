@@ -7,9 +7,7 @@ export const songSlice = createSlice({
         songs: ListSong,
     },
     reducers: {
-        getListSong: (state, action) => {
-            state.songs = ListSong;
-        },
+        getListSong: (state) => {},
     },
 });
 
