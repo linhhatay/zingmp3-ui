@@ -21,6 +21,8 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import { showToast } from '~/redux/reducer/toastSlice';
 import { getListSong } from '~/redux/reducer/songsSlice';
+import { Link } from 'react-router-dom';
+import Button from '~/components/Button';
 
 const PlayerControls = () => {
     const song = useSelector((state) => state.song.song);
@@ -166,7 +168,9 @@ const PlayerControls = () => {
                 <div className="player-controls-left">
                     <div className="media">
                         <div className="media-left">
-                            <img src={song.thumbnail} alt="media" />
+                            <Button to="/bai-hat">
+                                <img src={song.thumbnail} alt="media" />
+                            </Button>
                         </div>
                         <div className="media-content">
                             <h3>{song.name}</h3>

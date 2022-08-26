@@ -1,0 +1,193 @@
+.details {
+    margin-top: 70px;
+    padding-top: 12px;
+}
+
+.container {
+    padding-top: 20px;
+}
+
+.header {
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 300px calc(100% - 300px);
+
+    @media screen and (max-width: 1133px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.header__left {
+    // width: 300px;
+    // grid-template-rows: 1fr 2fr;
+
+    @media screen and (max-width: 1133px) {
+        display: grid;
+        grid-gap: 16px;
+        grid-template-columns: 200px calc(100% - 200px);
+    }
+}
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.7s;
+
+    &:hover {
+        .hover {
+            display: flex;
+        }
+
+        img {
+            transform: scale(1.1) translateZ(0);
+        }
+    }
+}
+
+.banner img {
+    height: 300px;
+    width: 300px;
+    border-radius: 5px;
+    transition: transform 0.7s;
+
+    @media screen and (max-width: 1133px) {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+.hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.large-icon {
+    width: 50px;
+    height: 50px;
+    color: var(--text-primary);
+}
+
+.header__right {
+}
+
+.content {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    text-align: center;
+
+    @media screen and (max-width: 1133px) {
+        text-align: left;
+        justify-content: space-between;
+        margin-top: 0;
+    }
+}
+
+.song-name {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-transform: none;
+    color: var(--text-primary);
+}
+
+.description {
+    color: var(--text-secondary);
+    line-height: 1.75;
+    font-size: 13px;
+}
+
+.description a {
+}
+
+.description span {
+}
+
+.vote {
+    color: var(--text-secondary);
+    line-height: 1.75;
+    font-size: 13px;
+}
+
+.actions {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (max-width: 1133px) {
+        flex-direction: unset;
+        justify-content: flex-start;
+    }
+}
+
+.button {
+    padding: 7px 24px;
+    font-size: 13px;
+    background-color: var(--purple-primary);
+    border: none;
+}
+
+.actions-btn {
+    margin-top: 0;
+}
+
+.actions div {
+    display: flex;
+    justify-content: center;
+}
+
+.list-icon {
+    margin-top: 16px;
+    color: var(--text-primary);
+
+    @media screen and (max-width: 1133px) {
+        margin-top: 0;
+    }
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: var(--alpha-bg);
+    border-radius: 50%;
+    margin-right: 10px;
+
+    &:hover {
+        filter: brightness(0.9);
+        cursor: pointer;
+    }
+}
+
+.title {
+    margin-top: 30px;
+    margin-bottom: 16px;
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.songs {
+    flex: 1;
+    margin-left: 20px;
+
+    @media screen and (max-width: 1133px) {
+        margin-left: 0;
+    }
+}

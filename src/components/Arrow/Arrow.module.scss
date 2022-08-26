@@ -1,0 +1,18 @@
+.container {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, 0.15);
+    box-shadow: 0 2px 4px 0 rgb(226 102 102 / 15%);
+    border-radius: 50%;
+    color: #fff;
+}
+
+.icon {
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

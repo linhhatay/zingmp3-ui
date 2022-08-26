@@ -24,7 +24,7 @@ body ::-webkit-scrollbar-track {
 
 .content {
     height: calc(100vh - 90px);
-    flex-grow: 1;
+    flex: 1;
     position: relative;
     padding: 0 59px;
     overflow: hidden scroll;
@@ -131,6 +131,12 @@ a {
     --song-item-action: hsla(0, 0%, 100%, 0.5);
 }
 
+[data-theme='Tháp Eiffel'] {
+    --layout-bg: #282828;
+    --primary-bg: #3d3d3d;
+    --sidebar-popup-bg: #292929;
+}
+
 .App {
     width: 100%;
     height: 100vh;
@@ -145,11 +151,19 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url(../../assets/img/themeBgs/listTheme2/theme1.jpg);
+    // background: url(../../assets/img/themeBgs/listTheme2/theme1.jpg);
     z-index: -1;
-    background-color: var(--layout-bg);
-    background-size: 1920px auto;
-    background-repeat: repeat;
+    background-color: var(--layout-bg) !important;
+    background-size: 1920px auto !important;
+    background-repeat: repeat !important;
+}
+
+.Modal__active {
+    border: 1px solid var(--purple-primary);
+
+    .themes__icon {
+        display: block !important;
+    }
 }
 
 @media screen and (max-width: 768px) {

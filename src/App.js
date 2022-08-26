@@ -66,7 +66,7 @@ function App() {
                                     </Layout>
                                 }
                             >
-                                <Route path={config.routes.song} element={<Song></Song>}>
+                                <Route path={config.routes.song} element={<Song />}>
                                     <Route path={config.routes.favorite} element={<MyMusic />} />
                                     <Route path={config.routes.upload} element={<Upload />} />
                                 </Route>
@@ -75,7 +75,7 @@ function App() {
                                     <Route path={config.routes.savedEpisode} element={<SaveEpisode />} />
                                     <Route path={config.routes.followedProgram} element={<FollowedProgram />} />
                                 </Route>
-                                <Route path={config.routes.album} element={<Album />}></Route>
+                                <Route path={config.routes.albumSong} element={<Album />}></Route>
                                 <Route path={config.routes.mv} element={<MV />}></Route>
                             </Route>
                         );

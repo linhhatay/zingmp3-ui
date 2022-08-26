@@ -11,7 +11,7 @@ const MenuList = [
             id: 1,
             icon: <RiFolderMusicLine />,
             name: 'Cá Nhân',
-            route: '/mymusic',
+            route: '/mymusic/song/favorite',
         },
         {
             id: 2,

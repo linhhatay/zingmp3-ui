@@ -51,10 +51,10 @@ const User = ({ children }) => {
                         <div className="user__nav">
                             <div className="user__nav-content">
                                 <nav className="user__nav-list">
-                                    <Button text className="user__nav-item" to="/mymusic/song">
+                                    <Button text className="user__nav-item" to="/mymusic/song/favorite">
                                         BÀI HÁT
                                     </Button>
-                                    <Button text className="user__nav-item" to="/mymusic/podcast">
+                                    <Button text className="user__nav-item" to="/mymusic/podcast/new-episode">
                                         PODCAST
                                     </Button>
                                     <Button text className="user__nav-item" to="/mymusic/album">

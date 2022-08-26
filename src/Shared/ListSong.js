@@ -1,233 +1,19 @@
-fetch('https://mp3.zing.vn/xhr/chart-realtime?songId=0&videoId=0&albumId=0&chart=song&time=-1')
-    .then((response) => {
-        return response.json();
-    })
-    .then((response) => {
-        localStorage.setItem('fetchAPI', JSON.stringify(response.data.song));
-    });
-
-const ListSong2 = [
-    {
-        id: 1,
-        favourite: false,
-        songName: 'Cứ Chill Thôi',
-        artist: ['Chillies', 'Suni Hạ Linh', 'Rhymastic'],
-        path: '../assets/music/listSong1/song1.mp3',
-        imgSrc: '../assets/img/music/listSong1/song1.jpg',
-        album: '',
-        duration: '04:30',
-    },
-    {
-        id: 2,
-        favourite: false,
-        songName: 'Crush',
-        artist: ['WN', 'Vani', 'An An'],
-        path: './assets/music/listSong1/song2.mp3',
-        imgSrc: './assets/img/music/listSong1/song2.jpg',
-        album: '',
-        duration: '03:18',
-    },
-    {
-        id: 3,
-        favourite: false,
-        songName: 'Vô Tình',
-        artist: ['Xesi', 'Hoaprox'],
-        path: './assets/music/listSong1/song3.mp3',
-        imgSrc: './assets/img/music/listSong1/song3.jpg',
-        album: 'Vô Tình (Single)',
-        duration: '04:33',
-    },
-    {
-        id: 4,
-        favourite: false,
-        songName: "Because I'm Stupid",
-        artist: ['SS501'],
-        path: './assets/music/listSong1/song4.flac',
-        imgSrc: './assets/img/music/listSong1/song4.jpg',
-        album: 'Boys Over Flower OST',
-        duration: '04:20',
-    },
-    {
-        id: 5,
-        favourite: false,
-        songName: 'Mama Boy',
-        artist: ['AMEE'],
-        path: './assets/music/listSong1/song5.mp3',
-        imgSrc: './assets/img/music/listSong1/song5.jpg',
-        album: 'dreeAMEE',
-        duration: '03:24',
-    },
-    {
-        id: 6,
-        favourite: false,
-        songName: 'Cửu Vĩ Hồ',
-        artist: ['Yun', 'Dr A'],
-        path: './assets/music/listSong1/song6.mp3',
-        imgSrc: './assets/img/music/listSong1/song6.jpg',
-        album: '',
-        duration: '06:05',
-    },
-    {
-        id: 7,
-        favourite: false,
-        songName: 'Anh Đã Quen Với Cô Đơn',
-        artist: ['Soobin Hoàng Sơn'],
-        path: './assets/music/listSong1/song7.mp3',
-        imgSrc: './assets/img/music/listSong1/song7.jpg',
-        album: 'Anh Đã Quen Với Cô Đơn (Single)',
-        duration: '03:55',
-    },
-    {
-        id: 8,
-        favourite: false,
-        songName: 'Túy Âm',
-        artist: ['Xesi', 'Masew', 'Nhật Nguyễn'],
-        path: './assets/music/listSong1/song8.mp3',
-        imgSrc: './assets/img/music/listSong1/song8.jpg',
-        album: 'Túy Âm (Single)',
-        duration: '03:22',
-    },
-    {
-        id: 9,
-        favourite: false,
-        songName: 'Kém Duyên',
-        artist: ['Rum', 'NIT', 'Masew'],
-        path: './assets/music/listSong1/song9.mp3',
-        imgSrc: './assets/img/music/listSong1/song9.jpg',
-        album: 'Kém Duyên (Single)',
-        duration: '03:44',
-    },
-    {
-        id: 10,
-        favourite: false,
-        songName: 'Tình Bạn Diệu Kì',
-        artist: ['AMEE', 'Ricky Star', 'Lăng LD'],
-        path: './assets/music/listSong1/song10.flac',
-        imgSrc: './assets/img/music/listSong1/song10.jpg',
-        album: '',
-        duration: '03:08',
-    },
-    {
-        id: 11,
-        favourite: false,
-        songName: 'Em Có Nghe',
-        artist: ['Kha'],
-        path: './assets/music/listSong1/song11.mp3',
-        imgSrc: './assets/img/music/listSong1/song11.jpg',
-        album: '',
-        duration: '04:15',
-    },
-    {
-        id: 12,
-        favourite: false,
-        songName: 'Lạc Trôi',
-        artist: ['Sơn Tùng M-TP'],
-        path: './assets/music/listSong1/song12.mp3',
-        imgSrc: './assets/img/music/listSong1/song12.jpg',
-        album: '',
-        duration: '03:53',
-    },
-    {
-        id: 13,
-        favourite: false,
-        songName: 'Một Năm Mới Bình An',
-        artist: ['Sơn Tùng MTP'],
-        path: './assets/music/listSong1/song13.mp3',
-        imgSrc: './assets/img/music/listSong1/song13.jpg',
-        album: '',
-        duration: '04:07',
-    },
-    {
-        id: 14,
-        favourite: false,
-        songName: 'Hongkong1 (Official Version)',
-        artist: ['Nguyễn Trọng Tài', 'San Ji', 'Double X'],
-        path: './assets/music/listSong1/song14.mp3',
-        imgSrc: './assets/img/music/listSong1/song14.jpg',
-        album: '',
-        duration: '04:13',
-    },
-    {
-        id: 15,
-        favourite: false,
-        songName: 'Gác Lại Âu Lo',
-        artist: ['Da LAB', 'Miu Lê'],
-        path: './assets/music/listSong1/song15.mp3',
-        imgSrc: './assets/img/music/listSong1/song15.jpg',
-        album: '',
-        duration: '04:42',
-    },
-    {
-        id: 16,
-        favourite: false,
-        songName: 'Chạy Ngay Đi',
-        artist: ['Sơn Tùng MTP'],
-        path: './assets/music/listSong1/song16.mp3',
-        imgSrc: './assets/img/music/listSong1/song16.jpg',
-        album: '',
-        duration: '04:08',
-    },
-    {
-        id: 17,
-        favourite: false,
-        songName: 'Cùng Anh',
-        artist: ['Ngọc Dolil', 'Hagi', 'STee'],
-        path: './assets/music/listSong1/song17.mp3',
-        imgSrc: './assets/img/music/listSong1/song17.jpg',
-        album: '',
-        duration: '03:17',
-    },
-    {
-        id: 18,
-        favourite: false,
-        songName: 'Hãy Trao Cho Anh',
-        artist: ['Sơn Tùng MTP'],
-        path: './assets/music/listSong1/song18.mp3',
-        imgSrc: './assets/img/music/listSong1/song18.jpg',
-        album: '',
-        duration: '04:05',
-    },
-    {
-        id: 19,
-        favourite: false,
-        songName: 'Tộc Ca',
-        artist: ['Phúc Du', 'SONBEAT'],
-        path: './assets/music/listSong1/song19.mp3',
-        imgSrc: './assets/img/music/listSong1/song19.jpg',
-        album: '',
-        duration: '03:11',
-    },
-    {
-        id: 20,
-        favourite: false,
-        songName: 'Thiên Lý Ơi',
-        artist: ['Jack', 'Bikay'],
-        path: './assets/music/listSong1/song20.mp3',
-        imgSrc: './assets/img/music/listSong1/song20.jpg',
-        album: '',
-        duration: '04:16',
-    },
-    {
-        id: 21,
-        favourite: false,
-        songName: 'Phố Đã Lên Đèn',
-        artist: ['Phố Đã Lên Đèn'],
-        path: './assets/music/listSong1/song21.mp3',
-        imgSrc: './assets/img/music/listSong1/song21.jpg',
-        album: '',
-        duration: '04:04',
-    },
-    {
-        id: 22,
-        favourite: false,
-        songName: 'BlackJack',
-        artist: ['Soobin', 'Binz'],
-        path: './assets/music/listSong2/song20.webm',
-        imgSrc: './assets/img/music/listSong2/song20.jpg',
-        album: 'BlackJack (Single)',
-        duration: '03:17',
-    },
-];
+import song1 from '~/assets/music/listSong/1.mp3';
+import song2 from '~/assets/music/listSong/2.mp3';
+import song3 from '~/assets/music/listSong/3.mp3';
+import song4 from '~/assets/music/listSong/4.mp3';
+import song5 from '~/assets/music/listSong/5.mp3';
+import song6 from '~/assets/music/listSong/6.mp3';
+import song7 from '~/assets/music/listSong/7.mp3';
+import song8 from '~/assets/music/listSong/8.mp3';
+import song9 from '~/assets/music/listSong/9.mp3';
+import song10 from '~/assets/music/listSong/10.mp3';
+import song11 from '~/assets/music/listSong/11.mp3';
+import song12 from '~/assets/music/listSong/12.mp3';
+import song13 from '~/assets/music/listSong/13.mp3';
+import song14 from '~/assets/music/listSong/14.mp3';
+import song15 from '~/assets/music/listSong/15.mp3';
+import song16 from '~/assets/music/listSong/16.mp3';
 
 const ListSong = [
     {
@@ -248,7 +34,7 @@ const ListSong = [
         artists_names: 'Miu Lê, Karik, Châu Đăng Khoa',
         performer: 'Miu Lê, Karik, Châu Đăng Khoa',
         type: 'audio',
-        link: 'https://mp3-320s1-zmp3.zmdcdn.me/4b4738ffc1be28e071af/7827520592060731168?authen=exp=1656085666~acl=/4b4738ffc1be28e071af/*~hmac=8e45c5557a83fa15a92beddc8759a66f&fs=MTY1NTkxMjg2NjE0N3x3ZWJWNnwwfDE3MS4yNTIdUngMzQdUngMzA',
+        link: song1,
         lyric: 'https://static-zmp3.zmdcdn.me/lyrics/8/a/c/e/8ace218e600f48bbf5153506218d4b76.lrc',
         thumbnail:
             'https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/1/b/8/9/1b8958017b04a663eb8c093905dd4d85.jpg?fs=MTY1NTkxMzAyOTE0MXx3ZWJWNHw',
@@ -303,7 +89,7 @@ const ListSong = [
         artists_names: 'Trịnh Thăng Bình, Liz Kim Cương',
         performer: 'Trịnh Thăng Bình, Liz Kim Cương',
         type: 'audio',
-        link: 'https://mp3-320s1-zmp3.zmdcdn.me/7b4c880778469118c857/7117505897050156687?authen=exp=1656086241~acl=/7b4c880778469118c857/*~hmac=6f51775e75e7c24abe4db9822ecaab56&fs=MTY1NTkxMzQ0MTM2NHx3ZWJWNnwwfDQyLjExOC42LjEzOQ',
+        link: song2,
         lyric: 'https://static-zmp3.zmdcdn.me/lyrics/9/8/f/6/98f6cf69d86e9ac4bc2d4dc5f18b3837.lrc',
         thumbnail:
             'https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/4/d/b/d/4dbd67a17030e72c036a9f98bd7ca325.jpg?fs=MTY1NTkxMzAyOTE0MXx3ZWJWNHw',
@@ -358,7 +144,7 @@ const ListSong = [
         artists_names: 'Dương Edward',
         performer: 'Dương Edward',
         type: 'audio',
-        link: 'https://mp3-320s1-zmp3.zmdcdn.me/a00185b975f89ca6c5e9/2002172968353491193?authen=exp=1656086259~acl=/a00185b975f89ca6c5e9/*~hmac=434d11ac5ffa44be601697433f9386c9&fs=MTY1NTkxMzQ1OTMxNHx3ZWJWNnwxMDEyNjEzNzYxfDExNi4xMTAdUngNDIdUngMjAy',
+        link: song3,
         lyric: 'https://static-zmp3.zmdcdn.me/lyrics/4/8/d/9/48d9e8a3e31469e1b18e437910228b5d.lrc',
         thumbnail:
             'https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/2/4/1/d/241d3b8aa26111306a49d0143754e205.jpg?fs=MTY1NTkxMzAyOTE0MXx3ZWJWNHw',
@@ -413,7 +199,7 @@ const ListSong = [
         artists_names: 'Châu Khải Phong, ACV',
         performer: 'Châu Khải Phong, ACV',
         type: 'audio',
-        link: 'https://mp3-320s1-zmp3.zmdcdn.me/00139d9731d6d88881c7/1010261190053887379?authen=exp=1656086221~acl=/00139d9731d6d88881c7/*~hmac=03c8607f1707eae79304bb26fddf3f27&fs=MTY1NTkxMzQyMTA4N3x3ZWJWNnwwfDE0LjE2MS4yLjI5',
+        link: song4,
         lyric: 'https://static-zmp3.zmdcdn.me/lyrics/4/3/8/0/4380bfa57dafd052ec2d3fb695cacea2.lrc',
         thumbnail:
             'https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/b/0/0/3/b003deb65962e3b9b5f61f21f2f375ba.jpg?fs=MTY1NTkxMzAyOTE0MXx3ZWJWNHw',
@@ -460,7 +246,7 @@ const ListSong = [
         artists_names: 'Diệu Kiên',
         performer: 'Diệu Kiên',
         type: 'audio',
-        link: 'https://mp3-320s1-zmp3.zmdcdn.me/ed530459ad1844461d09/6199167314198173281?authen=exp=1656086233~acl=/ed530459ad1844461d09/*~hmac=a64cfe83fa3b6a0c57fda3424279b024&fs=MTY1NTkxMzQzMzE2NXx3ZWJWNnwwfDExMy4xNjEdUngOTQdUngMjU0',
+        link: song5,
         lyric: 'https://static-zmp3.zmdcdn.me/lyrics/5/d/f/2/5df2018fe6b4aaf1a67952d2fb44c9c6.lrc',
         thumbnail:
             'https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/c/4/4/c/c44c3822217d8775780358df759f126d.jpg?fs=MTY1NTkxMzAyOTE0MXx3ZWJWNHw',
@@ -489,7 +275,7 @@ const ListSong = [
         artists_names: 'Hương Ly, Jombie, LY.M',
         performer: 'Hương Ly, Jombie, LY.M',
         type: 'audio',
-        link: 'https://mp3-320s1-zmp3.zmdcdn.me/019b819414d5fd8ba4c4/1831247915682755660?authen=exp=1656086271~acl=/019b819414d5fd8ba4c4/*~hmac=f0c1d80b2a36750e9d5c682c8dd876ee&fs=MTY1NTkxMzQ3MTY2MHx3ZWJWNnwwfDQyLjExNS4yMTAdUngOTmUsIC',
+        link: song6,
         lyric: 'https://static-zmp3.zmdcdn.me/lyrics/b/8/2/2/b822d5c4881e547e0ae4eeb4ee9ffb09.lrc',
         thumbnail:
             'https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/1/9/d/8/19d8b42b0aa5a00084d29c06a62556c7.jpg?fs=MTY1NTkxMzAyOTE0MXx3ZWJWNHw',
@@ -518,7 +304,7 @@ const ListSong = [
         artists_names: 'AMEE, Obito',
         performer: 'AMEE, Obito',
         type: 'audio',
-        link: 'https://mp3-320s1-zmp3.zmdcdn.me/08f56bfbe0ba09e450ab/6391752504459816786?authen=exp=1656086231~acl=/08f56bfbe0ba09e450ab/*~hmac=ab2df11e46060c1e95ff96c5e92d796b&fs=MTY1NTkxMzQzMTQyMHx3ZWJWNnwxMDAxNTgyODY1fDExMy4xNzmUsICdUngNS4xMDg',
+        link: song7,
         lyric: 'https://static-zmp3.zmdcdn.me/lyrics/e/e/5/2/ee52dfa863917b8211aefd879eadca9d.lrc',
         thumbnail:
             'https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/7/0/8/4/7084f2cd75ebf35936af4d1c878e1abe.jpg?fs=MTY1NTkxMzAyOTE0MXx3ZWJWNHw',
@@ -547,7 +333,7 @@ const ListSong = [
         artists_names: 'B Ray, Sofia',
         performer: 'B Ray, Sofia',
         type: 'audio',
-        link: 'https://mp3-320s1-zmp3.zmdcdn.me/562782017940901ec951/9067187480746543511?authen=exp=1656086228~acl=/562782017940901ec951/*~hmac=70714a8b21ebd12cb2317f7a74ebb0ab&fs=MTY1NTkxMzQyODU1N3x3ZWJWNnwxMDQ1MzM0OTkyfDExNi45Ny4xMDmUsICdUngMTk1',
+        link: song8,
         lyric: 'https://static-zmp3.zmdcdn.me/lyrics/a/1/e/9/a1e9f9954b1d6a97227aab38c2de703d.lrc',
         thumbnail:
             'https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/f/e/5/6/fe5659fe70dd215e616b784bd19751b5.jpg?fs=MTY1NTkxMzAyOTE0MXx3ZWJWNHw',
@@ -576,7 +362,7 @@ const ListSong = [
         artists_names: 'Hứa Kim Tuyền, AMEE',
         performer: 'Hứa Kim Tuyền, AMEE',
         type: 'audio',
-        link: 'https://mp3-320s1-zmp3.zmdcdn.me/9c297d09dc4835166c59/8798460583525638531?authen=exp=1656086248~acl=/9c297d09dc4835166c59/*~hmac=0eaeb3449914d638248097bf11873d7f&fs=MTY1NTkxMzQ0ODQyMXx3ZWJWNnwwfDEdUngNTUdUngMTkwLjE0Mw',
+        link: song9,
         lyric: 'https://static-zmp3.zmdcdn.me/lyrics/0/a/2/f/0a2fb57ab2b5672c90d4afd352af8d2c.lrc',
         thumbnail:
             'https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/b/6/d/e/b6de6c0857b19e1c921f2d379817d491.jpg?fs=MTY1NTkxMzAyOTE0MXx3ZWJWNHw',
@@ -606,7 +392,7 @@ const ListSong = [
         artists_names: 'Hoàng Lan',
         performer: 'Hoàng Lan',
         type: 'audio',
-        link: 'https://mp3-320s1-zmp3.zmdcdn.me/c1cd37c787866ed83797/6269309006981057254?authen=exp=1656086380~acl=/c1cd37c787866ed83797/*~hmac=46e195f420b32d3d392afe73be8497a6&fs=MTY1NTkxMzU4MDA2OXx3ZWJWNnwwfDExMy4xNzYdUngODMdUngMzY',
+        link: song10,
         lyric: 'https://static-zmp3.zmdcdn.me/lyrics/d/9/7/0/d9706814c5be9d73a15f174ce919fe0f.lrc',
         thumbnail:
             'https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/4/1/4/8/41488217c31b072ee8950b9993bd8825.jpg?fs=MTY1NTkxMzAyOTE0MXx3ZWJWNHw',
@@ -635,7 +421,7 @@ const ListSong = [
         artists_names: 'Trúc Nhân',
         performer: 'Trúc Nhân',
         type: 'audio',
-        link: 'https://mp3-320s1-zmp3.zmdcdn.me/960889092548cc169559/7567612820279114404?authen=exp=1656086234~acl=/960889092548cc169559/*~hmac=a030ec1288c0cc4bb63926be5c96acc7&fs=MTY1NTkxMzQzNDmUsIC0M3x3ZWJWNnwwfDExNS43NS4xOTEdUngMTmUsICw',
+        link: song11,
         lyric: 'https://static-zmp3.zmdcdn.me/lyrics/d/5/1/c/d51c696d3d339ebea6d816a4e2e0dece.lrc',
         thumbnail:
             'https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/0/3/9/7/0397842eb359d014b1928c3a7ff7d548.jpg?fs=MTY1NTkxMzAyOTE0MXx3ZWJWNHw',
@@ -664,7 +450,7 @@ const ListSong = [
         artists_names: 'Lê Bảo Bình',
         performer: 'Lê Bảo Bình',
         type: 'audio',
-        link: 'https://mp3-320s1-zmp3.zmdcdn.me/72979dff68be81e0d8af/1956815467550930921?authen=exp=1656086315~acl=/72979dff68be81e0d8af/*~hmac=1ef88ad9e2d5192d98632b9d2681a312&fs=MTY1NTkxMzUxNTE0M3x3ZWJWNnwwfDE0LjI0MS4xODIdUngMTMy',
+        link: song12,
         lyric: 'https://static-zmp3.zmdcdn.me/lyrics/0/a/4/f/0a4ffd56655cac6a213034800542f0c5.lrc',
         thumbnail:
             'https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/5/4/7/4/5474f725c68ef99234147ed45df16ec8.jpg?fs=MTY1NTkxMzAyOTE0MXx3ZWJWNHw',
@@ -693,7 +479,7 @@ const ListSong = [
         artists_names: 'Hồng Thanh, DJ Mie',
         performer: 'Hồng Thanh, DJ Mie',
         type: 'audio',
-        link: 'https://mp3-320s1-zmp3.zmdcdn.me/fe80177f4e3ea760fe2f/6252296707180606574?authen=exp=1656086222~acl=/fe80177f4e3ea760fe2f/*~hmac=c10d3c7eae5e0730f140a7cb8df33489&fs=MTY1NTkxMzQyMjmUsIC5N3x3ZWJWNnwxMDI1MzgwMjU0fDEdUngNTIdUngNTUdUngODM',
+        link: song13,
         lyric: 'https://static-zmp3.zmdcdn.me/lyrics/5/8/5/3/5853eca22fc2741d52352ba654f6e959.lrc',
         thumbnail:
             'https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/5/b/8/b/5b8b7cd3d1434afa3b2b9854efdc8756.jpg?fs=MTY1NTkxMzAyOTE0MXx3ZWJWNHw',
@@ -722,7 +508,7 @@ const ListSong = [
         artists_names: 'Tân Chề',
         performer: 'Tân Chề',
         type: 'audio',
-        link: 'https://mp3-320s1-zmp3.zmdcdn.me/c938c2c773869ad8c397/8985864340880041295?authen=exp=1656086230~acl=/c938c2c773869ad8c397/*~hmac=fcecea4705fa8db809291f1e058f7e1f&fs=MTY1NTkxMzQzMDExM3x3ZWJWNnwwfDExMy4xNjEdUngMzIdUngNzA',
+        link: song14,
         lyric: 'https://static-zmp3.zmdcdn.me/lyrics/f/b/4/9/fb4949ac1197e06ab4a6fca910976aca.lrc',
         thumbnail:
             'https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/b/9/0/1/b9014499063b9fd0a5292a5d797edd65.jpg?fs=MTY1NTkxMzAyOTE0MXx3ZWJWNHw',
@@ -751,7 +537,7 @@ const ListSong = [
         artists_names: 'Phát Hồ, Hương Ly, X2X',
         performer: 'Phát Hồ, Hương Ly, X2X',
         type: 'audio',
-        link: 'https://mp3-320s1-zmp3.zmdcdn.me/90f8b7f009b1e0efb9a0/4630734308594480478?authen=exp=1656086314~acl=/90f8b7f009b1e0efb9a0/*~hmac=93d49fe78e60dbb4e734c1b9885be5aa&fs=MTY1NTkxMzUxNDExNXx3ZWJWNnwwfDExNS43NC4yNDEdUngMjUy',
+        link: song15,
         lyric: 'https://static-zmp3.zmdcdn.me/lyrics/3/5/8/d/358d14c61079baee165f3931da6d450b.lrc',
         thumbnail:
             'https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/3/8/6/8/38682a9b538219105ff3323d9d6efbb9.jpg?fs=MTY1NTkxMzAyOTE0MXx3ZWJWNHw',
@@ -780,7 +566,7 @@ const ListSong = [
         artists_names: 'Phát Huy T4',
         performer: 'Phát Huy T4',
         type: 'audio',
-        link: 'https://mp3-320s1-zmp3.zmdcdn.me/9a30d1bf7bfe92a0cbef/81725770996747970?authen=exp=1656086966~acl=/9a30d1bf7bfe92a0cbef/*~hmac=19b4b700f388e9f9db0e5779877cf1d0&fs=MTY1NTkxNDE2NjQ2MHx3ZWJWNnwwfDEyMy4xNi4xMDUdUngNzY',
+        link: song16,
         lyric: 'https://static-zmp3.zmdcdn.me/lyrics/8/6/7/b/867bc8bc759ebb1da596a7c5d8b91813.lrc',
         thumbnail:
             'https://photo-resize-zmp3.zmdcdn.me/w94_r1x1_jpeg/cover/7/9/4/5/7945def0b61a268a8c5deff6bdb98346.jpg?fs=MTY1NTkxMzmUsICwNTmUsIC5MXx3ZWJWNHw',
@@ -788,11 +574,9 @@ const ListSong = [
         total: 1888,
         rank_num: '',
         rank_status: 'stand',
-        position: 29,
+        position: 16,
         order: 29,
     },
 ];
-
-const ListSong3 = JSON.parse(localStorage.getItem('fetchAPI')) ?? [];
 
 export { ListSong };

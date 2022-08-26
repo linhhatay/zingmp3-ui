@@ -1,22 +1,22 @@
 import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 import { AiOutlinePlayCircle, AiOutlineSetting } from 'react-icons/ai';
 import { BsArrowLeft, BsArrowRight, BsUpload } from 'react-icons/bs';
 import { IoDiamondOutline } from 'react-icons/io5';
-import 'tippy.js/dist/tippy.css';
 import { Avatar, DisplayIcon } from '~/components/Icons';
-import Modal from '~/modal';
+import Modal from '~/components/Modal';
 import Search from '../Search';
-import './Header.css';
 
-import classNames from 'classnames/bind';
 import { useState } from 'react';
 import { BiBlock } from 'react-icons/bi';
 import { FiLogOut } from 'react-icons/fi';
 import { MdOutlineHighQuality } from 'react-icons/md';
 import { RiArrowRightSLine, RiVipFill } from 'react-icons/ri';
 import Menu from '~/components/Popper/Menu';
+import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
+import './Header.css';
 
 const cx = classNames.bind(styles);
 

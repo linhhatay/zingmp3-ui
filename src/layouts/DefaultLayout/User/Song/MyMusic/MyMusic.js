@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { AiFillHeart, AiOutlineVideoCamera } from 'react-icons/ai';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import { BsFillPlayFill } from 'react-icons/bs';
@@ -6,7 +6,6 @@ import { CgMusic } from 'react-icons/cg';
 import { GiMicrophone } from 'react-icons/gi';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPlayerMusic } from '~/redux/reducer/songSlice';
-import { getListSong } from '~/redux/reducer/songsSlice';
 import '../../User.css';
 
 function MyMusic() {
@@ -26,10 +25,6 @@ function MyMusic() {
 
         return `${returnMinutes}:${returnSeconds}`;
     };
-
-    useEffect(() => {
-        dispatch(getListSong());
-    }, []);
 
     const sendData = (idSong) => {
         dispatch(getPlayerMusic(idSong));

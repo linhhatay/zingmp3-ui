@@ -1,0 +1,32 @@
+.follow {
+    padding-top: 100px;
+
+    .follow-tab {
+        background-color: #ffffff1a;
+        display: inline-block;
+        border-radius: 16px;
+        padding: 3px;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+
+        .btn {
+            padding: 6px 28px;
+            font-size: 12px;
+            text-transform: uppercase;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    }
+
+    .follow-nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    .active {
+        background-color: #ffffff4d;
+        color: #fff;
+    }
+}

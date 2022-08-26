@@ -9,10 +9,11 @@ const routes = {
     newEpisode: 'new-episode',
     savedEpisode: 'saved-episode',
     followedProgram: 'followed-program',
-    album: 'album',
+    albumSong: 'album',
     mv: 'mv',
     favorite: 'favorite',
     upload: 'upload',
+    details: '/bai-hat',
 };
 
 export default routes;

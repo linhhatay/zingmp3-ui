@@ -6,7 +6,7 @@ import { FaTimes } from 'react-icons/fa';
 import 'tippy.js/dist/tippy.css';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import SongItem from '~/components/SongItem';
-import { useDebounce } from '~/hooks';
+import { useDebounced } from '~/hooks';
 import './Search.css';
 import styles from './Search.module.scss';
 
@@ -19,7 +19,7 @@ const Search = () => {
 
     const inputRef = useRef();
 
-    const debounce = useDebounce(searchValue, 500);
+    const debounced = useDebounced(searchValue, 200);
 
     const handleHideResult = () => {
         setShowResult(false);
@@ -30,15 +30,16 @@ const Search = () => {
             setSearchResult([]);
             return;
         }
-        fetch(`http://ac.mp3.zing.vn/complete?type=artist,song,key,code&num=500&query ${encodeURIComponent(debounce)}`)
+
+        fetch(`14.225.192.25:3000/api/search?keyword=${encodeURIComponent(debounced)}`)
             .then((res) => res.json())
             .then((res) => {
                 setSearchResult(res.data.songs);
             })
             .catch((err) => {
-                alert('Hình như tính năng tìm kiếm bài hát bị lỗi rồi ông cháu ơi !');
+                alert('Hình như tính năng tìm kiếm bài hát bị lỗi rồi, mong bạn thông cảm !');
             });
-    }, [debounce]);
+    }, [debounced]);
 
     return (
         <HeadlessTippy
