@@ -398,6 +398,10 @@
         justify-content: space-between;
     }
 
+    .user__nav-item:last-child {
+        display: none;
+    }
+
     .user__songs-item-left {
         width: 70%;
     }
