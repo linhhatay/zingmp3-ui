@@ -168,9 +168,7 @@ const PlayerControls = () => {
                 <div className="player-controls-left">
                     <div className="media">
                         <div className="media-left">
-                            <Button to="/bai-hat">
-                                <img src={song.thumbnail} alt="media" />
-                            </Button>
+                            <img src={song.thumbnail} alt="media" />
                         </div>
                         <div className="media-content">
                             <h3>{song.name}</h3>

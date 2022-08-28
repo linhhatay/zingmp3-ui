@@ -16,6 +16,11 @@
     height: 596px;
     background-color: var(--primary-bg);
     border-radius: 8px;
+
+    @media screen and (max-width: 576px) {
+        height: 400px;
+        overflow: hidden;
+    }
 }
 
 .modal__heading {
@@ -68,12 +73,10 @@
     height: auto;
     cursor: pointer;
 
-    &:hover .themes__hover {
-        display: flex;
-    }
-
-    &:hover .themes__link {
-        // transform: scale(1.12, 1.12 );
+    &:hover {
+        .themes__hover {
+            display: flex;
+        }
     }
 }
 
@@ -82,6 +85,7 @@
     border-radius: 4px;
     cursor: pointer;
     position: relative;
+    display: block;
 }
 
 .themes__img:hover .themes__hover {

@@ -33,7 +33,7 @@ const Modal = ({ setShowModal }) => {
             <h3 className={cx('themes__title')}>{item.type}</h3>
             <div className={cx('row sm-gutter')}>
                 {item.themes.map((theme, index) => (
-                    <div className={cx('col l-2 m-3 c-4')} key={index}>
+                    <div className={cx('col l-2 m-3 c-12')} key={index}>
                         <div className={cx('themes__item-wrapper')}>
                             <div className={cx('themes__item')}>
                                 <div className={cx('themes__img')}>
