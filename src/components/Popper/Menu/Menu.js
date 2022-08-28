@@ -1,8 +1,6 @@
 import HeadlessTippy from '@tippyjs/react/headless';
-import { Wrapper as PopperWrapper } from '~/components/Popper';
-import { AiOutlineSetting } from 'react-icons/ai';
 import 'tippy.js/dist/tippy.css';
-import Button from '~/components/Button';
+import { Wrapper as PopperWrapper } from '~/components/Popper';
 import MenuItem from './MenuItem';
 
 import classNames from 'classnames/bind';

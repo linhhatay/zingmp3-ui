@@ -36,7 +36,6 @@ function MediaItem({ data }) {
                     <a href="#">{data.artists_names ?? data.artistsNames}</a>
                 </div>
             </div>
-            {/* <audio ref={audioUser} src={data.link} /> */}
             <div className={cx('content')}>
                 <a href="#">{data.album ? data.album.title : ''}</a>
             </div>
@@ -53,9 +52,6 @@ function MediaItem({ data }) {
                     </i>
                     <span className={cx('times')}>{CalculateTime(data.duration)}</span>
                 </div>
-                {/* <i>
-                    <BiDotsHorizontalRounded className={cx('icon')} />
-                </i> */}
             </div>
         </div>
     );

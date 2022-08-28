@@ -2,10 +2,6 @@ const listThemes = [
     {
         type: 'Chủ đề',
         themes: [
-            // {
-            //     name: 'Zing Music Awards',
-            //     image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/zma.jpg',
-            // },
             {
                 name: 'Tháp Eiffel',
                 image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/eiffel.jpg',
@@ -22,27 +18,6 @@ const listThemes = [
                 image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/rose.jpg',
                 themes: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme-background/rose.jpg',
             },
-            // {
-            //     name: 'IU',
-            //     image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/iu.jpg',
-            //     themes: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme-background/eiffel.jpg',
-            // },
-            // {
-            //     name: 'Ji Chang Wook',
-            //     image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/ji-chang-wook.jpg',
-            // },
-            // {
-            //     name: 'Lisa',
-            //     image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/lisa.jpg',
-            // },
-            // {
-            //     name: 'Jennie Kim',
-            //     image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/jennie.jpg',
-            // },
-            // {
-            //     name: 'Jisoo',
-            //     image: 'https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/theme/jisoo.jpg',
-            // },
         ],
     },
     {

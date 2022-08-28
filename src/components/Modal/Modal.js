@@ -1,10 +1,9 @@
 import classNames from 'classnames/bind';
 import { CgClose } from 'react-icons/cg';
+import { useDispatch } from 'react-redux';
+import { switchTheme } from '~/redux/reducer/themesSlice';
 import listThemes from '~/shared/ListThemes';
 import styles from './Modal.module.scss';
-import { useDispatch, useSelector } from 'react-redux';
-import { switchTheme } from '~/redux/reducer/themesSlice';
-import { AiFillCheckCircle } from 'react-icons/ai';
 
 const cx = classNames.bind(styles);
 
@@ -38,9 +37,6 @@ const Modal = ({ setShowModal }) => {
                             <div className={cx('themes__item')}>
                                 <div className={cx('themes__img')}>
                                     <img className={cx(['themes__link'])} src={theme.image} />
-                                    {/* <span className={cx('themes__icon')}>
-                                        <AiFillCheckCircle />
-                                    </span> */}
                                 </div>
                                 <div className={cx('themes__hover')}>
                                     <div className={cx('themes__btn')}>

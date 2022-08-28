@@ -62,15 +62,15 @@ const Zingchart = () => {
                             display: true,
                             position: 'bottom',
                         },
-                        scales: {
-                            y: {
-                                max: 100,
-                                min: 0,
-                                ticks: {
-                                    stepSize: 100,
-                                },
-                            },
-                        },
+                        // scales: {
+                        //     y: {
+                        //         max: 100,
+                        //         min: 0,
+                        //         ticks: {
+                        //             stepSize: 100,
+                        //         },
+                        //     },
+                        // },
                     }}
                 />
             </div>

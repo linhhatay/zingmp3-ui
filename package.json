@@ -1,5 +1,4 @@
 {
-    "homepage": "https://linhhatay.github.io/zingmp3-clone",
     "name": "zingmp3-clone",
     "version": "0.1.0",
     "private": true,
@@ -39,9 +38,7 @@
         "start": "react-app-rewired start",
         "build": "react-app-rewired build",
         "test": "react-app-rewired test",
-        "eject": "react-app-rewired eject",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "eject": "react-app-rewired eject"
     },
     "eslintConfig": {
         "extends": [
@@ -60,6 +57,5 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    },
-    "proxy": "http://14.225.192.25:3000"
+    }
 }

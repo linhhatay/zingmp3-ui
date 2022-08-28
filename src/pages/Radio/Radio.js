@@ -1,4 +1,4 @@
-import { Grid, Box } from '@mui/material';
+import { Grid } from '@mui/material';
 import './Radio.scss';
 import CardList from '~/pages/Radio/CardList/CardList';
 

@@ -139,28 +139,28 @@ const newFeeds2 = [
 ];
 
 const Follow = () => {
-    const [tab, settab] = useState('VN'); // 'VN', 'USUK', 'KPOP', "CPOP", "HOT"
+    const [tab, settab] = useState('VN');
     return (
         <div className="follow home">
             <div className="follow-nav">
                 <div className="follow-tab">
-                    <button className={`btn ${tab == 'VN' ? 'active' : ''}`} onClick={() => settab('VN')}>
+                    <button className={`btn ${tab === 'VN' ? 'active' : ''}`} onClick={() => settab('VN')}>
                         Việt Nam
                     </button>
 
-                    <button className={`btn ${tab == 'USUK' ? 'active' : ''}`} onClick={() => settab('USUK')}>
+                    <button className={`btn ${tab === 'USUK' ? 'active' : ''}`} onClick={() => settab('USUK')}>
                         US-UK
                     </button>
 
-                    <button className={`btn ${tab == 'KPOP' ? 'active' : ''}`} onClick={() => settab('KPOP')}>
+                    <button className={`btn ${tab === 'KPOP' ? 'active' : ''}`} onClick={() => settab('KPOP')}>
                         KPOP
                     </button>
 
-                    <button className={`btn ${tab == 'CPOP' ? 'active' : ''}`} onClick={() => settab('CPOP')}>
+                    <button className={`btn ${tab === 'CPOP' ? 'active' : ''}`} onClick={() => settab('CPOP')}>
                         CPOP
                     </button>
 
-                    <button className={`btn ${tab == 'HOT' ? 'active' : ''}`} onClick={() => settab('HOT')}>
+                    <button className={`btn ${tab === 'HOT' ? 'active' : ''}`} onClick={() => settab('HOT')}>
                         NỔI BẬT
                     </button>
                 </div>
